@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: dba;
+  src: url(../assets/fonts/darbots.otf);
+}
 /* individual components */
 h2
 {
