@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "thinoo";
+  src: url(assets/fonts/thinoothin.otf);
+}
+
+@font-face {
+  font-family: "db";
+  src: url(assets/fonts/darbots.otf);
+}
+
+/* individual components */
+h2
+{
+  font-size: 5vw;
+  font-family: calibri;
+}
+
+p
+{
+  font-size: 3vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body
+{
+    background-color: rgb(255, 255, 255);
+}
+
+img
+{
+    border: 2px;
+    width: 8vw;
+    height: 8vw;
+}
+h1
+{
+    font-family:thinoo;
+    align-items: center;   
+}
+
+.hea
+{
+    font-family:db;
+    align-items: center;
+    font-size: 5vw;
+}
+
+.grid-container {
+    display: grid;
+    border-radius: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .grid-item {
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  .grid-item:hover
+  {
+    border-color: black;
+    color:rgb(255, 255, 255);
+    background-color: rgb(2, 51, 184);
+  }
+
+  nav {
+    background-color: #ffffff;
+    font-family: calibri;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    border-radius: 10px;
+    color: rgb(2, 51, 184);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: rgb(2, 51, 184);
+    color:#ffffff;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(2, 51, 184);
+}
+.ico
+{
+  border-radius: 5px;
+  width: 4vw;
+  height:4vw;
+}
+.grid-container1 {
+  display: grid;
+  border-radius: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
+
+.grid-item1{
+  border-radius: 25px;
+  padding: 2px;
+  text-align: center;
+  
+}
+
+.table1 {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.table2
+{
+  background-color: #a3e2ff;
+}
+.th1 ,.td1 {
+  text-align: left;
+  padding: 8px;
+}
