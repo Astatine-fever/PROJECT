@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "thinoo";
-  src: url(assets/fonts/thinoothin.otf);
-}
-
-@font-face {
-  font-family: "db";
-  src: url(assets/fonts/darbots.otf);
-}
 
 /* individual components */
 h2
@@ -36,13 +27,13 @@ img
 }
 h1
 {
-    font-family:thinoo;
+    font-family:tn;
     align-items: center;   
 }
 
 .hea
 {
-    font-family:db;
+    font-family:dba;
     align-items: center;
     font-size: 5vw;
 }

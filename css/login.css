@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/PROJECT/assets/ui_icons/lb.jpg");
+    background-repeat: repeat;
+}
+
+  h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 400vw;
+    max-height:400vw;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: black;
+    
+  }
+  
+  .login-form {
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form label,
+  .login-form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .login-form button {
+    padding: 10px 20px;
+    background-color: #2925ff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .table1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .th1 ,.td1 {
+    text-align: left;
+    padding: 8px;
+  }
+  img
+  {
+    max-width: 10vw;
+    max-height: 10vw;
+  }
+  label
+  {
+    font-family: helvetica;
+    font-size: 2vw;
+  }
+  input
+  {
+    border-radius: 5px;
+    background-color: rgb(194, 194, 194);
+    border: none;
+    font-size: 2vw;
+  }
