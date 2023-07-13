@@ -2,6 +2,11 @@
   font-family: dba;
   src: url(../assets/fonts/darbots.otf);
 }
+
+@font-face {
+  font-family: urban;
+  src: url(../assets/fonts/urbanist.ttf);
+}
 /* individual components */
 h2
 {
@@ -30,7 +35,7 @@ img
 }
 h1
 {
-    font-family:tn;
+    font-family:urban;
     align-items: center;   
 }
 
@@ -57,8 +62,8 @@ h1
   .grid-item:hover
   {
     border-color: black;
-    color:rgb(255, 255, 255);
-    background-color: rgb(2, 51, 184);
+    background-color: rgb(253, 217, 14);
+    filter: invert(1);
   }
 
   nav {
@@ -74,21 +79,21 @@ h1
   }
   
   nav li {
-    float: left;
+    float: right;
   }
   
   nav li a {
     display: block;
     border-radius: 10px;
-    color: rgb(2, 51, 184);
+    
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   nav li a:hover {
-    background-color: rgb(2, 51, 184);
-    color:#ffffff;
+    background-color: rgb(255, 255, 255);
+    
   }
   .dropdown-content {
     display: none;
@@ -102,6 +107,8 @@ h1
 
 .dropdown:hover .dropdown-content {
     display: block;
+    right: 0;
+    left: 0;
 }
 
 .dropdown-content a {
@@ -112,7 +119,9 @@ h1
 }
 
 .dropdown-content a:hover {
-    background-color: rgb(2, 51, 184);
+    background-color: rgb(253, 217, 14);
+    filter: invert(1);
+    
 }
 .ico
 {
@@ -148,4 +157,8 @@ h1
 .th1 ,.td1 {
   text-align: left;
   padding: 8px;
+}
+.aa:hover
+{
+  color: #ffffff;
 }
