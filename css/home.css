@@ -7,17 +7,22 @@
   font-family: urban;
   src: url(../assets/fonts/urbanist.ttf);
 }
+
+@font-face {
+  font-family: wo;
+  src: url(../assets/fonts/wireone.ttf);
+}
 /* individual components */
 h2
 {
   font-size: 5vw;
-  font-family: calibri;
+  font-family: urban;
 }
 
 p
 {
-  font-size: 3vw;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  font-family: urban;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -39,11 +44,25 @@ h1
     align-items: center;   
 }
 
+option:hover
+{
+  font-family: urban;
+  border: none;
+  width: 50%;
+  font-size: large;
+}
+
 .hea
 {
     font-family:dba;
     align-items: center;
     font-size: 5vw;
+}
+
+.oli
+{
+  font-family: urban;
+  font-size: 2.5vw;
 }
 
 .grid-container {

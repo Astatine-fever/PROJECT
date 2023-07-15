@@ -19,10 +19,15 @@
   }
   
   body {
-    background-image: url("/PROJECT/assets/ui_icons/lb.jpg");
+    background-image: url("../assets/img/asa.jpg");
     background-repeat: repeat;
   }
   
+  img
+  {
+    max-width: 10vw;
+    min-width: 6vw;
+  }
   #regForm {
     background-color: #ffffff;
     margin: 100px auto;
@@ -44,6 +49,7 @@
     font-family: urban;
     border-radius: 10px;
   }
+  
   
   /* Mark input boxes that gets an error on validation: */
   input.invalid {
