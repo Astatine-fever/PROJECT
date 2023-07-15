@@ -100,3 +100,7 @@
   .step.finish {
     background-color: #04AA6D;
   }
+
+  .submit-btn {
+    display: none;
+  }
