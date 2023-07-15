@@ -62,7 +62,7 @@
   }
   
   button {
-    background-color: #04AA6D;
+    background-color: #3935f5;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -98,7 +98,7 @@
   
   /* Mark the steps that are finished and valid: */
   .step.finish {
-    background-color: #04AA6D;
+    background-color: #2925ff;
   }
 
   .submit-btn {

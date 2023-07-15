@@ -5,22 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Success</title>
   <style>
+
+  @font-face {
+      font-family: urban;
+      src: url(../assets/fonts/urbanist.ttf);
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: urban;
+      background-image: url("../assets/img/asa.jpg");
+      background-repeat: repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
     .container {
       max-width: 500px;
-      margin: 0 auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+
     p {
       text-align: center;
       margin-top: 20px;
@@ -30,24 +39,29 @@
       display: inline-block;
       padding: 10px 20px;
       margin-top: 20px;
-      background-color: #4caf50;
+      background-color: #3935f5;
       color: #fff;
       text-decoration: none;
       border-radius: 3px;
       transition: background-color 0.3s ease;
     }
     .button:hover {
-      background-color: #45a049;
+      background-color: rgb(8, 95, 255);
+    }
+    img
+    {
+      max-width: 6vw;
+      max-height:6vw;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Success!</h1>
+  <div class="container" align="center">
+    
+    <img src="../assets/icons/celebrating.png" alt="celebration">
     <p>Your registration was successful.</p>
     <p>Thank you for signing up.</p>
-    <p><a href="#" class="button">Continue</a></p>
+    <p><a href="../html/login.html" class="button">Press me to login</a></p>
   </div>
 </body>
 </html>
-

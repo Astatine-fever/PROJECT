@@ -1,8 +1,4 @@
 /* Add responsive styles here */
-@font-face {
-  font-family: rale;
-  src: url(../assets/fonts/raleway.ttf);
-}
 
 @font-face {
   font-family: urban;
@@ -19,16 +15,18 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("/PROJECT/assets/ui_icons/lb.jpg");
+  background-image: url("../assets/img/asa.jpg");
   background-repeat: repeat;
 }
 
 h2 {
   font-family: urban;
+  font-size: 5vw;
 }
 
 .container {
-  max-width: 90vw;
+  width: 60vw;
+  min-width: 40vw;
   padding: 20px;
   background-color: white;
   border-radius: 25px;
@@ -57,7 +55,7 @@ h2 {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  font-family: rale;
+  font-family: urban;
 }
 
 .table1 {
@@ -87,17 +85,17 @@ input {
   border-radius: 5px;
   background-color: rgb(194, 194, 194);
   border: none;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .lb:hover {
   background-color: rgb(8, 95, 255);
   color: white;
-  font-family: rale;
+  font-family: urban;
 }
 
 .cle:hover {
   background-color: rgb(255, 36, 7);
   color: white;
-  font-family: rale;
+  font-family: urban;
 }

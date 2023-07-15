@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $dd = $_POST['dd'];
     $uname = $_POST['uname'];
-    $pword = md5($_POST['pword']);
+    $pword = password_hash($_POST['pword'],PASSWORD_DEFAULT);
     $cg = $_POST['cg'];
     $school = $_POST['school'];
 
