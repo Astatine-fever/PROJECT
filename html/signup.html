@@ -23,21 +23,28 @@
     <div class="tab"><img  src="../assets/icons/bc.png"><br> Awesome.. When is your birthday :
       <p><input  oninput="this.className = ''" name="dd" type="date"></p>
     </div>
+    <div class="tab"><img  src="../assets/icons/education.png"><br>Tell us.. about your educational Qualification. :
+      <p>
+        <select name="cg" oninput="this.className = ''">
+          <option value="">Select qualification</option>
+          <option value="midschool">Midschool</option>
+          <option value="highschool">Highschool</option>
+          <option value="UG">UG</option>
+          <option value="PG">PG</option>
+        </select>
+      </p>
+      <p><input placeholder="School Name" oninput="this.className = ''" name="school" type="text"></p>
+    </div>
     <div class="tab"><img  src="../assets/icons/lock.png"><br> Pickup an awesome nickname and supersecret password :
       <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
       <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
-    </div>
-    <div class="tab"><img  src="../assets/icons/education.png"><br>Tell us.. about your educational Qualification. :
-      
-      <p><input placeholder="Current Grade" oninput="this.className = ''" name="cg" type="text"></p>
-      <p><input placeholder="School Name" oninput="this.className = ''" name="school" type="text"></p>
     </div>
     <div style="overflow:auto;">
       <div style="float:right;">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
         <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        <button type="submit" class="submitBtn">Submit</button> <!-- Submit button initially hidden -->
       </div>
+      <!-- <button type="submit" class="submitBtn">Submit</button> -- Submit button initially hidden -->
     </div>
     <!-- Circles which indicate the steps of the form: -->
     <div style="text-align:center;margin-top:40px;">

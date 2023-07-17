@@ -1,106 +1,122 @@
 @font-face {
-    font-family: rale;
-    src: url(../assets/fonts/raleway.ttf);
-  }
-  
-  @font-face {
-    font-family: urban;
-    src: url(../assets/fonts/urbanist.ttf);
-  }
-  
-  @font-face {
-    font-family: wo;
-    src: url(../assets/fonts/wireone.ttf);
-  }
+  font-family: rale;
+  src: url(../assets/fonts/raleway.ttf);
+}
 
+@font-face {
+  font-family: urban;
+  src: url(../assets/fonts/urbanist.ttf);
+}
+
+@font-face {
+  font-family: wo;
+  src: url(../assets/fonts/wireone.ttf);
+}
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url("../assets/img/asa.jpg");
-    background-repeat: repeat;
-  }
-  
-  img
-  {
-    max-width: 10vw;
-    min-width: 6vw;
-  }
-  #regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    font-family: urban;
-    padding: 40px;
-    width: 75vw;
-    min-width: 40vw;
-    border-radius: 25px;
-  }
-  
-  h1 {
-    text-align: center;  
-  }
-  
-  input {
-    padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    font-family: urban;
-    border-radius: 10px;
-  }
-  
-  
-  /* Mark input boxes that gets an error on validation: */
-  input.invalid {
-    background-color: #ffdddd;
-  }
-  
-  /* Hide all steps by default: */
-  .tab {
-    display: none;
-  }
-  
-  button {
-    background-color: #3935f5;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: urban;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  #prevBtn {
-    background-color: #bbbbbb;
-  }
-  
-  /* Make circles that indicate the steps of the form: */
-  .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;  
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-  }
-  
-  .step.active {
-    opacity: 1;
-  }
-  
-  /* Mark the steps that are finished and valid: */
-  .step.finish {
-    background-color: #2925ff;
-  }
+  box-sizing: border-box;
+}
 
-  .submit-btn {
-    display: none;
-  }
+body {
+  background-image: url("../assets/img/asa.jpg");
+  background-repeat: repeat;
+}
+
+img {
+  max-width: 10vw;
+  min-width: 6vw;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: urban;
+  padding: 40px;
+  width: 75vw;
+  min-width: 40vw;
+  border-radius: 25px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: urban;
+  border-radius: 10px;
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: urban;
+  border-radius: 10px;
+  border: black;
+  border-style: groove;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../assets/icons/down.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+}
+
+/* Mark input boxes that get an error on validation: */
+input.invalid,
+select.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #3935f5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: urban;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #2925ff;
+}
+
+.submit-btn {
+  display: none;
+}

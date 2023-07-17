@@ -1,9 +1,4 @@
 @font-face {
-  font-family: dba;
-  src: url(../assets/fonts/darbots.otf);
-}
-
-@font-face {
   font-family: urban;
   src: url(../assets/fonts/urbanist.ttf);
 }
@@ -12,156 +7,45 @@
   font-family: wo;
   src: url(../assets/fonts/wireone.ttf);
 }
-/* individual components */
-h2
-{
+
+@font-face {
+  font-family: dba;
+  src: url(../assets/fonts/darbots.otf);
+}
+
+/* Set the background color of the body */
+body {
+  background-color: #ffffff;
+}
+
+/* Style for images */
+img {
+  border: 2px;
+  width: 8vw;
+  height: 8vw;
+}
+
+/* Style for the main heading */
+.hea {
+  font-family: dba;
+  align-items: center;
   font-size: 5vw;
-  font-family: urban;
 }
 
-p
-{
-  font-size: 2.5vw;
-  font-family: urban;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-body
-{
-    background-color: rgb(255, 255, 255);
-}
-
-img
-{
-    border: 2px;
-    width: 8vw;
-    height: 8vw;
-}
-h1
-{
-    font-family:urban;
-    align-items: center;   
-}
-
-option:hover
-{
-  font-family: urban;
-  border: none;
-  width: 50%;
-  font-size: large;
-}
-
-.hea
-{
-    font-family:dba;
-    align-items: center;
-    font-size: 5vw;
-}
-
-.oli
-{
+/* Style for regular text */
+.oli {
   font-family: urban;
   font-size: 2.5vw;
 }
 
-.grid-container {
-    display: grid;
-    border-radius: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-  }
-  
-  .grid-item {
-    border-radius: 25px;
-    padding: 20px;
-    text-align: center;
-    
-  }
-  .grid-item:hover
-  {
-    border-color: black;
-    background-color: rgb(253, 217, 14);
-    filter: invert(1);
-  }
-
-  nav {
-    background-color: #ffffff;
-    font-family: calibri;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  nav li {
-    float: right;
-  }
-  
-  nav li a {
-    display: block;
-    border-radius: 10px;
-    
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  nav li a:hover {
-    background-color: rgb(255, 255, 255);
-    
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    right: 0;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: rgb(253, 217, 14);
-    filter: invert(1);
-    
-}
-.ico
-{
+/* Style for icon images */
+.ico {
   border-radius: 5px;
   width: 4vw;
-  height:4vw;
-}
-.grid-container1 {
-  display: grid;
-  border-radius: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+  height: 4vw;
 }
 
-.grid-item1{
-  border-radius: 25px;
-  padding: 2px;
-  text-align: center;
-  
-}
-
+/* Style for tables */
 .table1 {
   border-collapse: collapse;
   border-spacing: 0;
@@ -169,15 +53,130 @@ option:hover
   border-radius: 10px;
 }
 
-.table2
-{
+/* Style for specific table section */
+.table2 {
   background-color: #a3e2ff;
 }
-.th1 ,.td1 {
+
+/* Style for table headers and cells */
+.th1,
+.td1 {
   text-align: left;
   padding: 8px;
 }
-.aa:hover
-{
-  color: #ffffff;
+
+/* Style for grid containers */
+.grid-container {
+  display: grid;
+  border-radius: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+/* Style for grid items */
+.grid-item {
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for grid items on hover */
+.grid-item:hover {
+  border-color: black;
+  background-color: rgb(253, 217, 14);
+  filter: invert(1);
+}
+
+/* Style for another grid container */
+.grid-container1 {
+  display: grid;
+  border-radius: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
+
+/* Style for grid items within another container */
+.grid-item1 {
+  border-radius: 25px;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Style for heading level 2 */
+h2 {
+  font-size: 5vw;
+  font-family: urban;
+}
+
+/* Style for paragraphs */
+p {
+  font-size: 2.5vw;
+  font-family: urban;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Style for navigation */
+nav {
+  background-color: #ffffff;
+  font-family: calibri;
+}
+
+/* Style for unordered lists within navigation */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Style for list items within navigation */
+nav li {
+  float: right;
+}
+
+/* Style for links within navigation */
+nav li a {
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Style for links within navigation on hover */
+nav li a:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Style for dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+  left: 0;
+}
+
+/* Style for links within dropdown content */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style for links within dropdown content on hover */
+.dropdown-content a:hover {
+  background-color: rgb(253, 217, 14);
+  filter: invert(1);
 }

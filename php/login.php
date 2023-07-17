@@ -1,19 +1,12 @@
 <?php
-// Establish database connection (adjust these values according to your database configuration)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "astaverse";
-
-// Create a new MySQLi instance
-$conn = new mysqli($servername, $username, $password, $dbname);
+require_once 'db_conn.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
     // Prepare the query using a parameterized statement
-    $query = "SELECT UserName, Pwd FROM user_db WHERE UserName = ?";
+    $query = "SELECT * FROM user_db WHERE username = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -22,16 +15,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($row !== null) {
         // User exists, verify the password
-        $storedPassword = $row['Pwd'];
+        $storedPassword = $row['pwd'];
 
         if (password_verify($password, $storedPassword)) {
             // Password is correct, redirect to the desired page
-            echo "Login successful";
-            // Redirect to the desired page here
+            session_start();
+            $_SESSION['fn'] = $row['firstname'];
+            $_SESSION['ln'] = $row['lastname'];
+            $_SESSION['em'] = $row['email'];
+            $_SESSION['phn'] = $row['phone'];
+            $_SESSION['dob'] = $row['dob'];
+            $_SESSION['un'] = $row['username'];
+            $_SESSION['gd'] = $row['education'];
+            $_SESSION['uni'] = $row['edu_institute'];
+            
+            header("Location: homepage.php");
             exit();
+        }
+        else
+        {
+            $sa = "Invalid username or password";
+            echo($sa);
         }
     }
 
-    $error = "Invalid username or password";
+    
+    
 }
 ?>
