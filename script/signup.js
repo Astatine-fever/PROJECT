@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (currentTab === 2) {
       var dobField = document.forms["regForm"]["dd"];
       var dobValue = new Date(dobField.value);
-      var minDate = new Date("01-01-1990");
+      var minDate = new Date("01-01-1900");
       var maxDate = new Date("01-01-2010");
 
       if (dobField.value === "" || dobValue < minDate || dobValue > maxDate) {

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "asta_admin";
+$password = "Ast@t!n3p63";
 $database = "astaverse";
 
 // Create a connection
