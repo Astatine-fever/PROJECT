@@ -23,7 +23,7 @@ $fn = $_SESSION['fn'];
                 <ul>
                                      
                     <li class="dropdown">
-                        <a href="#"><img src="../assets/icons/settings.png" class="ico" alt="settings"></a>
+                        <a href="settings.php"><img src="../assets/icons/settings.png" class="ico" alt="settings"></a>
                     </li>
                     
                 </ul>

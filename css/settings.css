@@ -1,0 +1,120 @@
+@font-face {
+    font-family: urban;
+    src: url(../assets/fonts/urbanist.ttf);
+}
+
+@font-face {
+    font-family: wo;
+    src: url(../assets/fonts/wireone.ttf);
+}
+
+@font-face {
+    font-family: dba;
+    src: url(../assets/fonts/darbots.otf);
+}
+    
+
+/* Text Styling*/
+h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+h2
+{
+    font-family: dba;
+    font-size: 2vw;
+    color: black;
+}
+
+h3
+{
+    font-family: urban;
+}
+/* CSS for vertical tabs */
+.tab {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    width: 200px;
+    float: left;
+    }
+
+    .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: left;
+    }
+
+    .tab button:hover {
+    background-color: #8fb2ff;
+    }
+
+    .tab button.active {
+        background-color: rgb(253, 217, 14);
+        filter: invert(1);
+    }
+
+    .tabcontent {
+    display: none;
+    float: left;
+    padding: 20px;
+    width: 80%;
+    border-left: none;
+    height: 300px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: urban;
+      }
+  
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      select {
+        font-family: helvetica;
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+  
+      button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 600px) {
+    .tab {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .tab button {
+        flex: 1;
+        white-space: nowrap;
+    }
+    }

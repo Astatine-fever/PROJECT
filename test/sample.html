@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .tabs {
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 8px 12px;
+      background-color: #e0e0e0;
+      color: #333333;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 600px) {
+      /* Responsive layout for small screens */
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+  <script>
+    // JavaScript code
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all the category tabs
+      var tabs = document.querySelectorAll('.tab');
+      
+      // Attach click event listeners to the tabs
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          // Remove the active class from all tabs and content
+          tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+          });
+
+          var tabId = this.getAttribute('data-tab');
+          var tabContent = document.getElementById(tabId);
+
+          // Add the active class to the clicked tab and its content
+          this.classList.add('active');
+          tabContent.classList.add('active');
+        });
+      });
+
+      // Form validation
+      var form = document.querySelector('form');
+
+      form.addEventListener('submit', function(event) {
+        var nameInput = document.getElementById('name');
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
+        var confirmPasswordInput = document.getElementById('confirm-password');
+        var errorMessage = document.getElementById('error-message');
+
+        if (!nameInput.value || !emailInput.value || !passwordInput.value || !confirmPasswordInput.value) {
+          errorMessage.textContent = 'Please fill in all fields.';
+          event.preventDefault();
+        } else if (!isValidEmail(emailInput.value)) {
+          errorMessage.textContent = 'Please enter a valid email address.';
+          event.preventDefault();
+        } else if (passwordInput.value !== confirmPasswordInput.value) {
+          errorMessage.textContent = 'Passwords do not match.';
+          event.preventDefault();
+        }
+      });
+
+      function isValidEmail(email) {
+        var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return emailRegex.test(email);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Settings</h1>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="personal">Personal</div>
+      <div class="tab" data-tab="notifications">Notifications</div>
+      <div class="tab" data-tab="security">Security</div>
+    </div>
+
+    <div id="personal" class="tab-content active">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+
+    <div id="notifications" class="tab-content">
+      <form>
+        <label for="frequency">Notification Frequency:</label>
+        <select id="frequency" name="frequency">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+
+        <label for="sound">Notification Sound:</label>
+        <select id="sound" name="sound">
+          <option value="on">On</option>
+          <option value="off">Off</option>
+        </select>
+
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+
+    <div id="security" class="tab-content">
+      <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+
+    <button type="submit">Save</button>
+  </div>
+</body>
+</html>
