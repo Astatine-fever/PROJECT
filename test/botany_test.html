@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body_format">
+<style>
+  @font-face 
+  {
+      font-family: urban;
+      src: url(../assets/fonts/urbanist.ttf);
+  }
+
+  @font-face 
+  {
+      font-family: wo;
+      src: url(../assets/fonts/wireone.ttf);
+  }
+
+  @font-face 
+  {
+      font-family: dba;
+      src: url(../assets/fonts/darbots.otf);
+  }
+
+  * {
+      box-sizing: border-box;
+    }
+    
+  .header
+  {
+    background-color:#e5e5e5;
+    padding:2vw;
+    text-align:center;
+    border-radius: 2vw;
+  }
+
+  .body_format
+  {
+    font-family:urban;
+    color:black;
+  }
+  
+  .main 
+  {
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  label
+  {
+    font-weight: bolder;
+  }
+
+  label:hover
+  {
+    color: rgb(8, 95, 255);
+  }
+    
+   /* Style for tables */
+  .table1
+  {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border-radius: 10px;
+  }
+    
+  /* Style for table headers and cells */
+  .th1,
+  .td1 
+  {
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* Style for images */
+  img 
+  {
+      border: 2px;
+      width: 8vw;
+      height: 8vw;
+    }
+  
+  /* Style for ordered lists using Arabic numbering system */
+  ol 
+  {
+      list-style-type:decimal;
+  }
+    
+  @media only screen and (max-width: 620px) 
+  {
+    /* For mobile phones: */
+    .main 
+    {
+      width: 100%;
+    }
+  }
+
+  input[type="submit"] 
+  {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(8, 95, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover 
+  {
+    background-color: rgb(25, 70, 255);
+  }
+  </style>
+
+  <div class="header" >
+    <table class="table1">
+      <tr>
+          <td class="td1">
+              <img src="../assets/icons/art.png" alt="icon">
+          </td>
+          <td class="td1">
+              <h1 class="hea">Astaverse </h1>
+          </td>
+      </tr>    
+      </table>
+  </div>
+
+  <div class="main">
+    <h2>Answer this multiple choice questions </h2>
+    <form method="post" action="../php/physics_answer.php" data-parsley-validate>
+      
+        <h3>1. What is the process by which plants make their own food using sunlight?</h3>
+        <input type="radio" name="answer1" value="Photosynthesis" data-parsley-group="q1" required id="optionA1">
+        <label for="optionA1">A) Photosynthesis</label><br>
+        <input type="radio" name="answer1" value="Respiration" data-parsley-group="q1" required id="optionB1">
+        <label for="optionB1">B) Respiration</label><br>
+        <input type="radio" name="answer1" value="Transpiration" data-parsley-group="q1" required id="optionC1">
+        <label for="optionC1">C) Transpiration</label><br>
+        <input type="radio" name="answer1" value="Germination" data-parsley-group="q1" required id="optionD1">
+        <label for="optionD1">D) Germination</label><br>
+        
+        <h3>2. What part of a plant is responsible for absorbing water and nutrients from the soil?</h3>
+        <input type="radio" name="answer2" value="Leaves" data-parsley-group="q2" required id="optionA2">
+        <label for="optionA2">A) Leaves</label><br>
+        <input type="radio" name="answer2" value="Stems" data-parsley-group="q2" required id="optionB2">
+        <label for="optionB2">B) Stems</label><br>
+        <input type="radio" name="answer2" value="Roots" data-parsley-group="q2" required id="optionC2">
+        <label for="optionC2">C) Roots</label><br>
+        <input type="radio" name="answer2" value="Flowers" data-parsley-group="q2" required id="optionD2">
+        <label for="optionD2">D) Flowers</label><br>
+        
+        <h3>3. Which part of a flower contains the female reproductive organs?</h3>
+        <input type="radio" name="answer3" value="Pistil" data-parsley-group="q3" required id="optionA3">
+        <label for="optionA3">A) Pistil</label><br>
+        <input type="radio" name="answer3" value="Stamen" data-parsley-group="q3" required id="optionB3">
+        <label for="optionB3">B) Stamen</label><br>
+        <input type="radio" name="answer3" value="Sepal" data-parsley-group="q3" required id="optionC3">
+        <label for="optionC3">C) Sepal</label><br>
+        <input type="radio" name="answer3" value="Petals" data-parsley-group="q3" required id="optionD3">
+        <label for="optionD3">D) Petals</label><br>
+        
+        <h3>4. What is the primary function of the xylem in a plant?</h3>
+        <input type="radio" name="answer4" value="Transporting nutrients" data-parsley-group="q4" required id="optionA4">
+        <label for="optionA4">A) Transporting nutrients</label><br>
+        <input type="radio" name="answer4" value="Photosynthesis" data-parsley-group="q4" required id="optionB4">
+        <label for="optionB4">B) Photosynthesis</label><br>
+        <input type="radio" name="answer4" value="Anchoring the plant" data-parsley-group="q4" required id="optionC4">
+        <label for="optionC4">C) Anchoring the plant</label><br>
+        <input type="radio" name="answer4" value="Producing seeds" data-parsley-group="q4" required id="optionD4">
+        <label for="optionD4">D) Producing seeds</label><br>
+        
+        <h3>5. Which process involves the release of water vapor from the surface of plant leaves?</h3>
+        <input type="radio" name="answer5" value="Germination" data-parsley-group="q5" required id="optionA5">
+        <label for="optionA5">A) Germination</label><br>
+        <input type="radio" name="answer5" value="Photosynthesis" data-parsley-group="q5" required id="optionB5">
+        <label for="optionB5">B) Photosynthesis</label><br>
+        <input type="radio" name="answer5" value="Transpiration" data-parsley-group="q5" required id="optionC5">
+        <label for="optionC5">C) Transpiration</label><br>
+        <input type="radio" name="answer5" value="Fertilization" data-parsley-group="q5" required id="optionD5">
+        <label for="optionD5">D) Fertilization</label><br>
+        
+        <h3>6. Which part of the plant is responsible for the exchange of gases with the atmosphere?</h3>
+        <input type="radio" name="answer6" value="Roots" data-parsley-group="q6" required id="optionA6">
+        <label for="optionA6">A) Roots</label><br>
+        <input type="radio" name="answer6" value="Leaves" data-parsley-group="q6" required id="optionB6">
+        <label for="optionB6">B) Leaves</label><br>
+        <input type="radio" name="answer6" value="Stems" data-parsley-group="q6" required id="optionC6">
+        <label for="optionC6">C) Stems</label><br>
+        <input type="radio" name="answer6" value="Flowers" data-parsley-group="q6" required id="optionD6">
+        <label for="optionD6">D) Flowers</label><br>
+        
+        <h3>7. What is the process by which pollen is transferred from one flower to another for fertilization?</h3>
+        <input type="radio" name="answer7" value="Germination" data-parsley-group="q7" required id="optionA7">
+        <label for="optionA7">A) Germination</label><br>
+        <input type="radio" name="answer7" value="Pollination" data-parsley-group="q7" required id="optionB7">
+        <label for="optionB7">B) Pollination</label><br>
+        <input type="radio" name="answer7" value="Photosynthesis" data-parsley-group="q7" required id="optionC7">
+        <label for="optionC7">C) Photosynthesis</label><br>
+        <input type="radio" name="answer7" value="Transpiration" data-parsley-group="q7" required id="optionD7">
+        <label for="optionD7">D) Transpiration</label><br>
+        
+        <h3>8. Which of the following is a type of plant tissue responsible for transporting water and nutrients?</h3>
+        <input type="radio" name="answer8" value="Meristem" data-parsley-group="q8" required id="optionA8">
+        <label for="optionA8">A) Meristem</label><br>
+        <input type="radio" name="answer8" value="Dermal tissue" data-parsley-group="q8" required id="optionB8">
+        <label for="optionB8">B) Dermal tissue</label><br>
+        <input type="radio" name="answer8" value="Vascular tissue" data-parsley-group="q8" required id="optionC8">
+        <label for="optionC8">C) Vascular tissue</label><br>
+        <input type="radio" name="answer8" value="Ground tissue" data-parsley-group="q8" required id="optionD8">
+        <label for="optionD8">D) Ground tissue</label><br>
+        
+        <h3>9. What is the male reproductive part of a flower called?</h3>
+        <input type="radio" name="answer9" value="Pistil" data-parsley-group="q9" required id="optionA9">
+        <label for="optionA9">A) Pistil</label><br>
+        <input type="radio" name="answer9" value="Stamen" data-parsley-group="q9" required id="optionB9">
+        <label for="optionB9">B) Stamen</label><br>
+        <input type="radio" name="answer9" value="Sepal" data-parsley-group="q9" required id="optionC9">
+        <label for="optionC9">C) Sepal</label><br>
+        <input type="radio" name="answer9" value="Petals" data-parsley-group="q9" required id="optionD9">
+        <label for="optionD9">D) Petals</label><br>
+
+        <h3>10. Which plant hormone promotes cell elongation and growth in the shoot system?</h3>
+        <input type="radio" name="answer10" value="Auxin" data-parsley-group="q10" required id="optionA10">
+        <label for="optionA10">A) Auxin</label><br>
+        <input type="radio" name="answer10" value="Gibberellin" data-parsley-group="q10" required id="optionB10">
+        <label for="optionB10">B) Gibberellin</label><br>
+        <input type="radio" name="answer10" value="Cytokinin" data-parsley-group="q10" required id="optionC10">
+        <label for="optionC10">C) Cytokinin</label><br>
+        <input type="radio" name="answer10" value="Abscisic acid" data-parsley-group="q10" required id="optionD10">
+        <label for="optionD10">D) Abscisic acid</label><br>
+        
+        <h3>11. What is the process of asexual reproduction in plants where new plants grow from the roots, stems, or leaves of the parent plant?</h3>
+        <input type="radio" name="answer11" value="Pollination" data-parsley-group="q11" required id="optionA11">
+        <label for="optionA11">A) Pollination</label><br>
+        <input type="radio" name="answer11" value="Vegetative propagation" data-parsley-group="q11" required id="optionB11">
+        <label for="optionB11">B) Vegetative propagation</label><br>
+        <input type="radio" name="answer11" value="Germination" data-parsley-group="q11" required id="optionC11">
+        <label for="optionC11">C) Germination</label><br>
+        <input type="radio" name="answer11" value="Photosynthesis" data-parsley-group="q11" required id="optionD11">
+        <label for="optionD11">D) Photosynthesis</label><br>
+        
+        <h3>12. Which of the following is a type of plant tissue responsible for photosynthesis?</h3>
+        <input type="radio" name="answer12" value="Meristem" data-parsley-group="q12" required id="optionA12">
+        <label for="optionA12">A) Meristem</label><br>
+        <input type="radio" name="answer12" value="Dermal tissue" data-parsley-group="q12" required id="optionB12">
+        <label for="optionB12">B) Dermal tissue</label><br>
+        <input type="radio" name="answer12" value="Vascular tissue" data-parsley-group="q12" required id="optionC12">
+        <label for="optionC12">C) Vascular tissue</label><br>
+        <input type="radio" name="answer12" value="Mesophyll tissue" data-parsley-group="q12" required id="optionD12">
+        <label for="optionD12">D) Mesophyll tissue</label><br>
+        
+        <h3>13. What is the process of the transfer of pollen from the anther to the stigma of a flower within the same plant called?</h3>
+        <input type="radio" name="answer13" value="Self-pollination" data-parsley-group="q13" required id="optionA13">
+        <label for="optionA13">A) Self-pollination</label><br>
+        <input type="radio" name="answer13" value="Cross-pollination" data-parsley-group="q13" required id="optionB13">
+        <label for="optionB13">B) Cross-pollination</label><br>
+        <input type="radio" name="answer13" value="Germination" data-parsley-group="q13" required id="optionC13">
+        <label for="optionC13">C) Germination</label><br>
+        <input type="radio" name="answer13" value="Fertilization" data-parsley-group="q13" required id="optionD13">
+        <label for="optionD13">D) Fertilization</label><br>
+        
+        <h3>14. Which part of a plant is responsible for the production of food through photosynthesis?</h3>
+        <input type="radio" name="answer14" value="Roots" data-parsley-group="q14" required id="optionA14">
+        <label for="optionA14">A) Roots</label><br>
+        <input type="radio" name="answer14" value="Leaves" data-parsley-group="q14" required id="optionB14">
+        <label for="optionB14">B) Leaves</label><br>
+        <input type="radio" name="answer14" value="Stems" data-parsley-group="q14" required id="optionC14">
+        <label for="optionC14">C) Stems</label><br>
+        <input type="radio" name="answer14" value="Flowers" data-parsley-group="q14" required id="optionD14">
+        <label for="optionD14">D) Flowers</label><br>
+        
+        <h3>15. What is the process of asexual reproduction in plants where seeds are produced without fertilization?</h3>
+        <input type="radio" name="answer15" value="Vegetative propagation" data-parsley-group="q15" required id="optionA15">
+        <label for="optionA15">A) Vegetative propagation</label><br>
+        <input type="radio" name="answer15" value="Pollination" data-parsley-group="q15" required id="optionB15">
+        <label for="optionB15">B) Pollination</label><br>
+        <input type="radio" name="answer15" value="Seed dispersal" data-parsley-group="q15" required id="optionC15">
+        <label for="optionC15">C) Seed dispersal</label><br>
+        <input type="radio" name="answer15" value="Germination" data-parsley-group="q15" required id="optionD15">
+        <label for="optionD15">D) Germination</label><br>
+
+        <h3>16. Which plant hormone is responsible for the promotion of fruit ripening?</h3>
+        <input type="radio" name="answer16" value="Gibberellin" data-parsley-group="q16" required id="optionA16">
+        <label for="optionA16">A) Gibberellin</label><br>
+        <input type="radio" name="answer16" value="Cytokinin" data-parsley-group="q16" required id="optionB16">
+        <label for="optionB16">B) Cytokinin</label><br>
+        <input type="radio" name="answer16" value="Auxin" data-parsley-group="q16" required id="optionC16">
+        <label for="optionC16">C) Auxin</label><br>
+        <input type="radio" name="answer16" value="Ethylene" data-parsley-group="q16" required id="optionD16">
+        <label for="optionD16">D) Ethylene</label><br>
+        
+        <h3>17. What is the process by which water is lost from a plant through small pores on the surface of leaves?</h3>
+        <input type="radio" name="answer17" value="Transpiration" data-parsley-group="q17" required id="optionA17">
+        <label for="optionA17">A) Transpiration</label><br>
+        <input type="radio" name="answer17" value="Respiration" data-parsley-group="q17" required id="optionB17">
+        <label for="optionB17">B) Respiration</label><br>
+        <input type="radio" name="answer17" value="Photosynthesis" data-parsley-group="q17" required id="optionC17">
+        <label for="optionC17">C) Photosynthesis</label><br>
+        <input type="radio" name="answer17" value="Pollination" data-parsley-group="q17" required id="optionD17">
+        <label for="optionD17">D) Pollination</label><br>
+        
+        <h3>18. What is the process of a seedling emerging from the seed and developing into a young plant?</h3>
+        <input type="radio" name="answer18" value="Germination" data-parsley-group="q18" required id="optionA18">
+        <label for="optionA18">A) Germination</label><br>
+        <input type="radio" name="answer18" value="Pollination" data-parsley-group="q18" required id="optionB18">
+        <label for="optionB18">B) Pollination</label><br>
+        <input type="radio" name="answer18" value="Fertilization" data-parsley-group="q18" required id="optionC18">
+        <label for="optionC18">C) Fertilization</label><br>
+        <input type="radio" name="answer18" value="Vegetative propagation" data-parsley-group="q18" required id="optionD18">
+        <label for="optionD18">D) Vegetative propagation</label><br>
+        
+        <h3>19. Which type of plant tissue is responsible for gas exchange, regulating water vapor, and oxygen exchange?</h3>
+        <input type="radio" name="answer19" value="Vascular tissue" data-parsley-group="q19" required id="optionA19">
+        <label for="optionA19">A) Vascular tissue</label><br>
+        <input type="radio" name="answer19" value="Dermal tissue" data-parsley-group="q19" required id="optionB19">
+        <label for="optionB19">B) Dermal tissue</label><br>
+        <input type="radio" name="answer19" value="Ground tissue" data-parsley-group="q19" required id="optionC19">
+        <label for="optionC19">C) Ground tissue</label><br>
+        <input type="radio" name="answer19" value="Mesophyll tissue" data-parsley-group="q19" required id="optionD19">
+        <label for="optionD19">D) Mesophyll tissue</label><br>
+        
+        <h3>20. What is the process of a plant bending or growing towards a light source called?</h3>
+        <input type="radio" name="answer20" value="Phototropism" data-parsley-group="q20" required id="optionA20">
+        <label for="optionA20">A) Phototropism</label><br>
+        <input type="radio" name="answer20" value="Geotropism" data-parsley-group="q20" required id="optionB20">
+        <label for="optionB20">B) Geotropism</label><br>
+        <input type="radio" name="answer20" value="Thigmotropism" data-parsley-group="q20" required id="optionC20">
+        <label for="optionC20">C) Thigmotropism</label><br>
+        <input type="radio" name="answer20" value="Hydrotropism" data-parsley-group="q20" required id="optionD20">
+        <label for="optionD20">D) Hydrotropism</label><br>
+        
+        <h3>21. Which part of the plant anchors it to the soil and absorbs water and nutrients?</h3>
+        <input type="radio" name="answer21" value="Stems" data-parsley-group="q21" required id="optionA21">
+        <label for="optionA21">A) Stems</label><br>
+        <input type="radio" name="answer21" value="Leaves" data-parsley-group="q21" required id="optionB21">
+        <label for="optionB21">B) Leaves</label><br>
+        <input type="radio" name="answer21" value="Flowers" data-parsley-group="q21" required id="optionC21">
+        <label for="optionC21">C) Flowers</label><br>
+        <input type="radio" name="answer21" value="Roots" data-parsley-group="q21" required id="optionD21">
+        <label for="optionD21">D) Roots</label><br>
+        
+        <h3>22. Which plant hormone is responsible for inhibiting growth and promoting seed dormancy?</h3>
+        <input type="radio" name="answer22" value="Auxin" data-parsley-group="q22" required id="optionA22">
+        <label for="optionA22">A) Auxin</label><br>
+        <input type="radio" name="answer22" value="Ethylene" data-parsley-group="q22" required id="optionB22">
+        <label for="optionB22">B) Ethylene</label><br>
+        <input type="radio" name="answer22" value="Gibberellin" data-parsley-group="q22" required id="optionC22">
+        <label for="optionC22">C) Gibberellin</label><br>
+        <input type="radio" name="answer22" value="Abscisic acid" data-parsley-group="q22" required id="optionD22">
+        <label for="optionD22">D) Abscisic acid</label><br>
+        
+        <h3>23. Which type of plant tissue is responsible for the growth of new cells and tissues?</h3>
+        <input type="radio" name="answer23" value="Vascular tissue" data-parsley-group="q23" required id="optionA23">
+        <label for="optionA23">A) Vascular tissue</label><br>
+        <input type="radio" name="answer23" value="Dermal tissue" data-parsley-group="q23" required id="optionB23">
+        <label for="optionB23">B) Dermal tissue</label><br>
+        <input type="radio" name="answer23" value="Ground tissue" data-parsley-group="q23" required id="optionC23">
+        <label for="optionC23">C) Ground tissue</label><br>
+        <input type="radio" name="answer23" value="Meristematic tissue" data-parsley-group="q23" required id="optionD23">
+        <label for="optionD23">D) Meristematic tissue</label><br>
+        
+        <h3>24. Which type of plant tissue is responsible for the transport of water, nutrients, and sugars?</h3>
+        <input type="radio" name="answer24" value="Vascular tissue" data-parsley-group="q24" required id="optionA24">
+        <label for="optionA24">A) Vascular tissue</label><br>
+        <input type="radio" name="answer24" value="Dermal tissue" data-parsley-group="q24" required id="optionB24">
+        <label for="optionB24">B) Dermal tissue</label><br>
+        <input type="radio" name="answer24" value="Ground tissue" data-parsley-group="q24" required id="optionC24">
+        <label for="optionC24">C) Ground tissue</label><br>
+        <input type="radio" name="answer24" value="Meristematic tissue" data-parsley-group="q24" required id="optionD24">
+        <label for="optionD24">D) Meristematic tissue</label><br>
+        
+        <h3>25. What is the process of the maturation of male gametes within the pollen grains?</h3>
+        <input type="radio" name="answer25" value="Pollination" data-parsley-group="q25" required id="optionA25">
+        <label for="optionA25">A) Pollination</label><br>
+        <input type="radio" name="answer25" value="Fertilization" data-parsley-group="q25" required id="optionB25">
+        <label for="optionB25">B) Fertilization</label><br>
+        <input type="radio" name="answer25" value="Pollenation" data-parsley-group="q25" required id="optionC25">
+        <label for="optionC25">C) Pollenation</label><br>
+        <input type="radio" name="answer25" value="Pollen germination" data-parsley-group="q25" required id="optionD25">
+        <label for="optionD25">D) Pollen germination</label><br>
+            
+    <input type="submit" value="Submit" id="submitBtn">
+    </form>
+  </div>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.10.2/dist/parsley.min.js"></script>
+</body>
+</html>
+

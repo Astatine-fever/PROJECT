@@ -33,14 +33,14 @@ $physics_answer=[
 '14'=>'Diffraction',
 '15'=>'Volt',
 '16'=>'Watt',
-'17'=>'Kinetic energy',
+'17'=>'Kinetic Energy',
 '18'=>"Newton's Second Law",
 '19'=>'Weight',
 '20'=>'Copper',
 '21'=>'Photosynthesis',
-'22'=>'Chemical energy',
+'22'=>'Chemical Energy',
 '23'=>'Solid',
-'24'=>'Potential energy',
+'24'=>'Potential Energy',
 '25'=>'Gravitational force',
 ];
 $physics_question=[];
@@ -66,7 +66,7 @@ $totalQuestions = 25;
 $t_date=date('Y-m-d');
 $score = ($correctAnswers / $totalQuestions) * 100;
 echo("Your score is $score");
-$sql="INSERT INTO physics values($fina,$score,$t_date)";
+$sql="INSERT INTO physics values('$fina','$score','$t_date')";
 if($conn->query($sql)===true)
 {
     echo("row inserted ");

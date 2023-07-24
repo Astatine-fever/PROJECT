@@ -47,7 +47,7 @@ $conn->query($sql);
                     <li class="dropdown">
                         <a href="settings.php"><img src="../assets/icons/test.png" class="ico" alt="settings"></a>
                         <div class="dropdown-content">
-                        <a href="physics_test.php"> Physics MCQ TEST  </a>
+                        <a href="../test/physics_test.html"> Physics MCQ TEST  </a>
                         <a href="html/login.html"><img src="assets/icons/login.png" class="ico" > Login </a>
                         </div>
                     </li>
