@@ -227,3 +227,10 @@ nav li a:hover {
     background-color: rgb(253, 217, 14);
     filter: invert(1);
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Set the width of grid items to 100% on mobile devices */
+    .grid-item {
+        grid-column: 1 / -1;
+    }
+}

@@ -1,6 +1,26 @@
 <?php
 session_start();
 $fn = $_SESSION['fn'];
+require_once 'db_conn.php';
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql="CREATE TABLE IF NOT EXISTS scores (
+    `fname` VARCHAR(50),
+    `physics` int(3),
+    `chemistry` int(3), 
+    `maths` int(3),
+    `botany` int(3),
+    `zoology` int(3),
+    `technology` int(3),
+    `engineering` int(3))";
+
+$conn->query($sql);
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +41,15 @@ $fn = $_SESSION['fn'];
         <div class="icons">
         <nav>
                 <ul>
-                                     
                     <li class="dropdown">
                         <a href="settings.php"><img src="../assets/icons/settings.png" class="ico" alt="settings"></a>
+                    </li>                
+                    <li class="dropdown">
+                        <a href="settings.php"><img src="../assets/icons/test.png" class="ico" alt="settings"></a>
+                        <div class="dropdown-content">
+                        <a href="physics_test.php"> Physics MCQ TEST  </a>
+                        <a href="html/login.html"><img src="assets/icons/login.png" class="ico" > Login </a>
+                        </div>
                     </li>
                     
                 </ul>

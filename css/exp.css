@@ -1,0 +1,35 @@
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    right: 0;
+    left: 0;
+  }
+  
+  
+  /* Style for links within dropdown content on hover */
+  .dropdown-content a:hover {
+    background-color: rgb(253, 217, 14);
+    filter: invert(1);
+  }
+  
+  /* Style for links within dropdown content */
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+  }
+  
+  /* Style for the login and signup links */
+  .dropdown-content a:nth-child(2),
+  .dropdown-content a:nth-child(3) {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the login and signup icons */
+  .dropdown-content a:nth-child(2) img,
+  .dropdown-content a:nth-child(3) img {
+    margin-right: 5px; /* Add some spacing between the icon and text */
+  }

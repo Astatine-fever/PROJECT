@@ -201,3 +201,9 @@ nav li a:hover {
 .dropdown-content a:nth-child(3) img {
   margin-right: 5px; /* Add some spacing between the icon and text */
 }
+@media screen and (max-width: 600px) {
+  .grid-item {
+    width: 100%; /* Set the width to 100% to occupy the full screen width */
+    grid-column: span 1; /* Ensure each grid item spans only one column */
+  }
+}
