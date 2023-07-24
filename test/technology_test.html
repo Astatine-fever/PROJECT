@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body_format">
+<style>
+  @font-face 
+  {
+      font-family: urban;
+      src: url(../assets/fonts/urbanist.ttf);
+  }
+
+  @font-face 
+  {
+      font-family: wo;
+      src: url(../assets/fonts/wireone.ttf);
+  }
+
+  @font-face 
+  {
+      font-family: dba;
+      src: url(../assets/fonts/darbots.otf);
+  }
+
+  * {
+      box-sizing: border-box;
+    }
+    
+  .header
+  {
+    background-color:#e5e5e5;
+    padding:2vw;
+    text-align:center;
+    border-radius: 2vw;
+  }
+
+  .body_format
+  {
+    font-family:urban;
+    color:black;
+  }
+  
+  .main 
+  {
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  label
+  {
+    font-weight: bolder;
+  }
+
+  label:hover
+  {
+    color: rgb(8, 95, 255);
+  }
+    
+   /* Style for tables */
+  .table1
+  {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border-radius: 10px;
+  }
+    
+  /* Style for table headers and cells */
+  .th1,
+  .td1 
+  {
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* Style for images */
+  img 
+  {
+      border: 2px;
+      width: 8vw;
+      height: 8vw;
+    }
+  
+  /* Style for ordered lists using Arabic numbering system */
+  ol 
+  {
+      list-style-type:decimal;
+  }
+    
+  @media only screen and (max-width: 620px) 
+  {
+    /* For mobile phones: */
+    .main 
+    {
+      width: 100%;
+    }
+  }
+
+  input[type="submit"] 
+  {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(8, 95, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover 
+  {
+    background-color: rgb(25, 70, 255);
+  }
+  </style>
+
+  <div class="header" >
+    <table class="table1">
+      <tr>
+          <td class="td1">
+              <img src="../assets/icons/art.png" alt="icon">
+          </td>
+          <td class="td1">
+              <h1 class="hea">Astaverse </h1>
+          </td>
+      </tr>    
+      </table>
+  </div>
+
+  <div class="main">
+    <h2>Answer this multiple choice questions </h2>
+    <form method="post" action="../php/technology_answer.php" data-parsley-validate>
+      
+        <h3>1. What does CPU stand for in computing?</h3>
+        <input type="radio" name="answer1" value="Central Processing Unit" data-parsley-group="q1" required id="optionA1">
+        <label for="optionA1">A) Central Processing Unit</label><br>
+        <input type="radio" name="answer1" value="Control Processing Unit" data-parsley-group="q1" required id="optionB1">
+        <label for="optionB1">B) Control Processing Unit</label><br>
+        <input type="radio" name="answer1" value="Computer Processing Unit" data-parsley-group="q1" required id="optionC1">
+        <label for="optionC1">C) Computer Processing Unit</label><br>
+        <input type="radio" name="answer1" value="Central Program Unit" data-parsley-group="q1" required id="optionD1">
+        <label for="optionD1">D) Central Program Unit</label><br>
+        
+        <h3>2. Which of the following is NOT a programming language?</h3>
+        <input type="radio" name="answer2" value="Python" data-parsley-group="q2" required id="optionA2">
+        <label for="optionA2">A) Python</label><br>
+        <input type="radio" name="answer2" value="HTML" data-parsley-group="q2" required id="optionB2">
+        <label for="optionB2">B) HTML</label><br>
+        <input type="radio" name="answer2" value="Java" data-parsley-group="q2" required id="optionC2">
+        <label for="optionC2">C) Java</label><br>
+        <input type="radio" name="answer2" value="CPU" data-parsley-group="q2" required id="optionD2">
+        <label for="optionD2">D) CPU</label><br>
+        
+        <h3>3. What does CSS stand for?</h3>
+        <input type="radio" name="answer3" value="Cascade Style Sheets" data-parsley-group="q3" required id="optionA3">
+        <label for="optionA3">A) Cascade Style Sheets</label><br>
+        <input type="radio" name="answer3" value="Common Style Sheets" data-parsley-group="q3" required id="optionB3">
+        <label for="optionB3">B) Common Style Sheets</label><br>
+        <input type="radio" name="answer3" value="Computer Style Sheets" data-parsley-group="q3" required id="optionC3">
+        <label for="optionC3">C) Computer Style Sheets</label><br>
+        <input type="radio" name="answer3" value="Cascading Script Sheets" data-parsley-group="q3" required id="optionD3">
+        <label for="optionD3">D) Cascading Script Sheets</label><br>
+
+        <h3>4. What is the binary representation of the decimal number 10?</h3>
+        <input type="radio" name="answer4" value="1010" data-parsley-group="q4" required id="optionA4">
+        <label for="optionA4">A) 1010</label><br>
+        <input type="radio" name="answer4" value="1100" data-parsley-group="q4" required id="optionB4">
+        <label for="optionB4">B) 1100</label><br>
+        <input type="radio" name="answer4" value="1110" data-parsley-group="q4" required id="optionC4">
+        <label for="optionC4">C) 1110</label><br>
+        <input type="radio" name="answer4" value="1001" data-parsley-group="q4" required id="optionD4">
+        <label for="optionD4">D) 1001</label><br>
+        
+        <h3>5. What does RAM stand for in computing?</h3>
+        <input type="radio" name="answer5" value="Random Access Memory" data-parsley-group="q5" required id="optionA5">
+        <label for="optionA5">A) Random Access Memory</label><br>
+        <input type="radio" name="answer5" value="Read-Only Memory" data-parsley-group="q5" required id="optionB5">
+        <label for="optionB5">B) Read-Only Memory</label><br>
+        <input type="radio" name="answer5" value="Run-All Memory" data-parsley-group="q5" required id="optionC5">
+        <label for="optionC5">C) Run-All Memory</label><br>
+        <input type="radio" name="answer5" value="Random Algebraic Memory" data-parsley-group="q5" required id="optionD5">
+        <label for="optionD5">D) Random Algebraic Memory</label><br>
+        
+        <h3>6. Which programming language is commonly used for web development and creating dynamic websites?</h3>
+        <input type="radio" name="answer6" value="C++" data-parsley-group="q6" required id="optionA6">
+        <label for="optionA6">A) C++</label><br>
+        <input type="radio" name="answer6" value="JavaScript" data-parsley-group="q6" required id="optionB6">
+        <label for="optionB6">B) JavaScript</label><br>
+        <input type="radio" name="answer6" value="Python" data-parsley-group="q6" required id="optionC6">
+        <label for="optionC6">C) Python</label><br>
+        <input type="radio" name="answer6" value="Java" data-parsley-group="q6" required id="optionD6">
+        <label for="optionD6">D) Java</label><br>
+        
+        <h3>7. Which data structure uses the Last-In-First-Out (LIFO) principle?</h3>
+        <input type="radio" name="answer7" value="Queue" data-parsley-group="q7" required id="optionA7">
+        <label for="optionA7">A) Queue</label><br>
+        <input type="radio" name="answer7" value="Stack" data-parsley-group="q7" required id="optionB7">
+        <label for="optionB7">B) Stack</label><br>
+        <input type="radio" name="answer7" value="Heap" data-parsley-group="q7" required id="optionC7">
+        <label for="optionC7">C) Heap</label><br>
+        <input type="radio" name="answer7" value="Array" data-parsley-group="q7" required id="optionD7">
+        <label for="optionD7">D) Array</label><br>
+        
+        <h3>8. What is the function of an operating system?</h3>
+        <input type="radio" name="answer8" value="Run web servers" data-parsley-group="q8" required id="optionA8">
+        <label for="optionA8">A) Run web servers</label><br>
+        <input type="radio" name="answer8" value="Manage hardware components" data-parsley-group="q8" required id="optionB8">
+        <label for="optionB8">B) Manage hardware components</label><br>
+        <input type="radio" name="answer8" value="Handle user interfaces" data-parsley-group="q8" required id="optionC8">
+        <label for="optionC8">C) Handle user interfaces</label><br>
+        <input type="radio" name="answer8" value="All of the above" data-parsley-group="q8" required id="optionD8">
+        <label for="optionD8">D) All of the above</label><br>
+        
+        <h3>9. What is the process of finding errors and bugs in software?</h3>
+        <input type="radio" name="answer9" value="Debugging" data-parsley-group="q9" required id="optionA9">
+        <label for="optionA9">A) Debugging</label><br>
+        <input type="radio" name="answer9" value="Compiling" data-parsley-group="q9" required id="optionB9">
+        <label for="optionB9">B) Compiling</label><br>
+        <input type="radio" name="answer9" value="Testing" data-parsley-group="q9" required id="optionC9">
+        <label for="optionC9">C) Testing</label><br>
+        <input type="radio" name="answer9" value="Optimizing" data-parsley-group="q9" required id="optionD9">
+        <label for="optionD9">D) Optimizing</label><br>
+        
+        <h3>10. What protocol is used for secure data communication over the internet?</h3>
+        <input type="radio" name="answer10" value="FTP" data-parsley-group="q10" required id="optionA10">
+        <label for="optionA10">A) FTP</label><br>
+        <input type="radio" name="answer10" value="HTTP" data-parsley-group="q10" required id="optionB10">
+        <label for="optionB10">B) HTTP</label><br>
+        <input type="radio" name="answer10" value="SMTP" data-parsley-group="q10" required id="optionC10">
+        <label for="optionC10">C) SMTP</label><br>
+        <input type="radio" name="answer10" value="HTTPS" data-parsley-group="q10" required id="optionD10">
+        <label for="optionD10">D) HTTPS</label><br>
+
+        <h3>11. What does HTML stand for in web development?</h3>
+        <input type="radio" name="answer11" value="Hyper Text Markup Language" data-parsley-group="q11" required id="optionA11">
+        <label for="optionA11">A) Hyper Text Markup Language</label><br>
+        <input type="radio" name="answer11" value="Home Tool Markup Language" data-parsley-group="q11" required id="optionB11">
+        <label for="optionB11">B) Home Tool Markup Language</label><br>
+        <input type="radio" name="answer11" value="Hyperlink and Text Markup Language" data-parsley-group="q11" required id="optionC11">
+        <label for="optionC11">C) Hyperlink and Text Markup Language</label><br>
+        <input type="radio" name="answer11" value="Hyper Transfer Markup Language" data-parsley-group="q11" required id="optionD11">
+        <label for="optionD11">D) Hyper Transfer Markup Language</label><br>
+        
+        <h3>12. What is the process of converting high-level programming code into machine code called?</h3>
+        <input type="radio" name="answer12" value="Interpreting" data-parsley-group="q12" required id="optionA12">
+        <label for="optionA12">A) Interpreting</label><br>
+        <input type="radio" name="answer12" value="Translating" data-parsley-group="q12" required id="optionB12">
+        <label for="optionB12">B) Translating</label><br>
+        <input type="radio" name="answer12" value="Compiling" data-parsley-group="q12" required id="optionC12">
+        <label for="optionC12">C) Compiling</label><br>
+        <input type="radio" name="answer12" value="Decompiling" data-parsley-group="q12" required id="optionD12">
+        <label for="optionD12">D) Decompiling</label><br>
+        
+        <h3>13. Which of the following is NOT a fundamental data type in most programming languages?</h3>
+        <input type="radio" name="answer13" value="Integer" data-parsley-group="q13" required id="optionA13">
+        <label for="optionA13">A) Integer</label><br>
+        <input type="radio" name="answer13" value="String" data-parsley-group="q13" required id="optionB13">
+        <label for="optionB13">B) String</label><br>
+        <input type="radio" name="answer13" value="Boolean" data-parsley-group="q13" required id="optionC13">
+        <label for="optionC13">C) Boolean</label><br>
+        <input type="radio" name="answer13" value="Character" data-parsley-group="q13" required id="optionD13">
+        <label for="optionD13">D) Character</label><br>
+        
+        <h3>14. What is the binary representation of the decimal number 25?</h3>
+        <input type="radio" name="answer14" value="11001" data-parsley-group="q14" required id="optionA14">
+        <label for="optionA14">A) 11001</label><br>
+        <input type="radio" name="answer14" value="11100" data-parsley-group="q14" required id="optionB14">
+        <label for="optionB14">B) 11100</label><br>
+        <input type="radio" name="answer14" value="10011" data-parsley-group="q14" required id="optionC14">
+        <label for="optionC14">C) 10011</label><br>
+        <input type="radio" name="answer14" value="10100" data-parsley-group="q14" required id="optionD14">
+        <label for="optionD14">D) 10100</label><br>
+        
+        <h3>15. What does SQL stand for in database management?</h3>
+        <input type="radio" name="answer15" value="Structured Query Language" data-parsley-group="q15" required id="optionA15">
+        <label for="optionA15">A) Structured Query Language</label><br>
+        <input type="radio" name="answer15" value="Sequential Query Language" data-parsley-group="q15" required id="optionB15">
+        <label for="optionB15">B) Sequential Query Language</label><br>
+        <input type="radio" name="answer15" value="Standard Query Language" data-parsley-group="q15" required id="optionC15">
+        <label for="optionC15">C) Standard Query Language</label><br>
+        <input type="radio" name="answer15" value="Static Query Language" data-parsley-group="q15" required id="optionD15">
+        <label for="optionD15">D) Static Query Language</label><br>
+        
+        <h3>16. Which sorting algorithm has an average-case time complexity of O(n log n)?</h3>
+        <input type="radio" name="answer16" value="Bubble Sort" data-parsley-group="q16" required id="optionA16">
+        <label for="optionA16">A) Bubble Sort</label><br>
+        <input type="radio" name="answer16" value="Insertion Sort" data-parsley-group="q16" required id="optionB16">
+        <label for="optionB16">B) Insertion Sort</label><br>
+        <input type="radio" name="answer16" value="Merge Sort" data-parsley-group="q16" required id="optionC16">
+        <label for="optionC16">C) Merge Sort</label><br>
+        <input type="radio" name="answer16" value="Selection Sort" data-parsley-group="q16" required id="optionD16">
+        <label for="optionD16">D) Selection Sort</label><br>
+        
+        <h3>17. In object-oriented programming, what is the concept of bundling data and methods together called?</h3>
+        <input type="radio" name="answer17" value="Encapsulation" data-parsley-group="q17" required id="optionA17">
+        <label for="optionA17">A) Encapsulation</label><br>
+        <input type="radio" name="answer17" value="Abstraction" data-parsley-group="q17" required id="optionB17">
+        <label for="optionB17">B) Abstraction</label><br>
+        <input type="radio" name="answer17" value="Polymorphism" data-parsley-group="q17" required id="optionC17">
+        <label for="optionC17">C) Polymorphism</label><br>
+        <input type="radio" name="answer17" value="Inheritance" data-parsley-group="q17" required id="optionD17">
+        <label for="optionD17">D) Inheritance</label><br>
+        
+        <h3>18. What type of network is used to connect devices within a limited geographical area?</h3>
+        <input type="radio" name="answer18" value="WAN" data-parsley-group="q18" required id="optionA18">
+        <label for="optionA18">A) WAN</label><br>
+        <input type="radio" name="answer18" value="MAN" data-parsley-group="q18" required id="optionB18">
+        <label for="optionB18">B) MAN</label><br>
+        <input type="radio" name="answer18" value="LAN" data-parsley-group="q18" required id="optionC18">
+        <label for="optionC18">C) LAN</label><br>
+        <input type="radio" name="answer18" value="CAN" data-parsley-group="q18" required id="optionD18">
+        <label for="optionD18">D) CAN</label><br>
+        
+        <h3>19. What is the process of finding and fixing security vulnerabilities in software?</h3>
+        <input type="radio" name="answer19" value="Encryption" data-parsley-group="q19" required id="optionA19">
+        <label for="optionA19">A) Encryption</label><br>
+        <input type="radio" name="answer19" value="Debugging" data-parsley-group="q19" required id="optionB19">
+        <label for="optionB19">B) Debugging</label><br>
+        <input type="radio" name="answer19" value="Penetration Testing" data-parsley-group="q19" required id="optionC19">
+        <label for="optionC19">C) Penetration Testing</label><br>
+        <input type="radio" name="answer19" value="Secure Coding" data-parsley-group="q19" required id="optionD19">
+        <label for="optionD19">D) Secure Coding</label><br>
+        
+        <h3>20. Which data structure uses nodes with pointers to navigate through elements?</h3>
+        <input type="radio" name="answer20" value="Linked List" data-parsley-group="q20" required id="optionA20">
+        <label for="optionA20">A) Linked List</label><br>
+        <input type="radio" name="answer20" value="Stack" data-parsley-group="q20" required id="optionB20">
+        <label for="optionB20">B) Stack</label><br>
+        <input type="radio" name="answer20" value="Queue" data-parsley-group="q20" required id="optionC20">
+        <label for="optionC20">C) Queue</label><br>
+        <input type="radio" name="answer20" value="Array" data-parsley-group="q20" required id="optionD20">
+        <label for="optionD20">D) Array</label><br>
+
+        <h3>21. What is the process of breaking a complex problem into smaller, manageable subproblems?</h3>
+        <input type="radio" name="answer21" value="Abstraction" data-parsley-group="q21" required id="optionA21">
+        <label for="optionA21">A) Abstraction</label><br>
+        <input type="radio" name="answer21" value="Decomposition" data-parsley-group="q21" required id="optionB21">
+        <label for="optionB21">B) Decomposition</label><br>
+        <input type="radio" name="answer21" value="Polymorphism" data-parsley-group="q21" required id="optionC21">
+        <label for="optionC21">C) Polymorphism</label><br>
+        <input type="radio" name="answer21" value="Inheritance" data-parsley-group="q21" required id="optionD21">
+        <label for="optionD21">D) Inheritance</label><br>
+        
+        <h3>22. Which data structure is used to implement a Last-In-First-Out (LIFO) ordering?</h3>
+        <input type="radio" name="answer22" value="Queue" data-parsley-group="q22" required id="optionA22">
+        <label for="optionA22">A) Queue</label><br>
+        <input type="radio" name="answer22" value="Stack" data-parsley-group="q22" required id="optionB22">
+        <label for="optionB22">B) Stack</label><br>
+        <input type="radio" name="answer22" value="Heap" data-parsley-group="q22" required id="optionC22">
+        <label for="optionC22">C) Heap</label><br>
+        <input type="radio" name="answer22" value="Array" data-parsley-group="q22" required id="optionD22">
+        <label for="optionD22">D) Array</label><br>
+        
+        <h3>23. Which programming paradigm is focused on changing the state of data through the use of functions?</h3>
+        <input type="radio" name="answer23" value="Functional Programming" data-parsley-group="q23" required id="optionA23">
+        <label for="optionA23">A) Functional Programming</label><br>
+        <input type="radio" name="answer23" value="Object-Oriented Programming" data-parsley-group="q23" required id="optionB23">
+        <label for="optionB23">B) Object-Oriented Programming</label><br>
+        <input type="radio" name="answer23" value="Procedural Programming" data-parsley-group="q23" required id="optionC23">
+        <label for="optionC23">C) Procedural Programming</label><br>
+        <input type="radio" name="answer23" value="Structured Programming" data-parsley-group="q23" required id="optionD23">
+        <label for="optionD23">D) Structured Programming</label><br>
+        
+        <h3>24. In the binary numbering system, what does a single digit represent?</h3>
+        <input type="radio" name="answer24" value="Two" data-parsley-group="q24" required id="optionA24">
+        <label for="optionA24">A) Two</label><br>
+        <input type="radio" name="answer24" value="Eight" data-parsley-group="q24" required id="optionB24">
+        <label for="optionB24">B) Eight</label><br>
+        <input type="radio" name="answer24" value="Ten" data-parsley-group="q24" required id="optionC24">
+        <label for="optionC24">C) Ten</label><br>
+        <input type="radio" name="answer24" value="Sixteen" data-parsley-group="q24" required id="optionD24">
+        <label for="optionD24">D) Sixteen</label><br>
+        
+        <h3>25. Which type of loop executes a block of code as long as a specified condition is true?</h3>
+        <input type="radio" name="answer25" value="For Loop" data-parsley-group="q25" required id="optionA25">
+        <label for="optionA25">A) For Loop</label><br>
+        <input type="radio" name="answer25" value="While Loop" data-parsley-group="q25" required id="optionB25">
+        <label for="optionB25">B) While Loop</label><br>
+        <input type="radio" name="answer25" value="Do-While Loop" data-parsley-group="q25" required id="optionC25">
+        <label for="optionC25">C) Do-While Loop</label><br>
+        <input type="radio" name="answer25" value="If Statement" data-parsley-group="q25" required id="optionD25">
+        <label for="optionD25">D) If Statement</label><br>
+
+    <input type="submit" value="Submit" id="submitBtn">
+    </form>
+  </div>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.10.2/dist/parsley.min.js"></script>
+</body>
+</html>
+

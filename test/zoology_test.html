@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body_format">
+    <style>
+        @font-face {
+            font-family: urban;
+            src: url(../assets/fonts/urbanist.ttf);
+        }
+
+        @font-face {
+            font-family: wo;
+            src: url(../assets/fonts/wireone.ttf);
+        }
+
+        @font-face {
+            font-family: dba;
+            src: url(../assets/fonts/darbots.otf);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #e5e5e5;
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2vw;
+        }
+
+        .body_format {
+            font-family: urban;
+            color: black;
+        }
+
+        .main {
+            float: left;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        label {
+            font-weight: bolder;
+        }
+
+        label:hover {
+            color: rgb(8, 95, 255);
+        }
+
+        /* Style for tables */
+        .table1 {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Style for table headers and cells */
+        .th1,
+        .td1 {
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* Style for images */
+        img {
+            border: 2px;
+            width: 8vw;
+            height: 8vw;
+        }
+
+        /* Style for ordered lists using Arabic numbering system */
+        ol {
+            list-style-type: decimal;
+        }
+
+        @media only screen and (max-width: 620px) {
+
+            /* For mobile phones: */
+            .main {
+                width: 100%;
+            }
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgb(8, 95, 255);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(25, 70, 255);
+        }
+    </style>
+
+    <div class="header">
+        <table class="table1">
+            <tr>
+                <td class="td1">
+                    <img src="../assets/icons/art.png" alt="icon">
+                </td>
+                <td class="td1">
+                    <h1 class="hea">Astaverse </h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="main">
+        <h2>Answer this multiple choice questions </h2>
+        <form method="post" action="../php/physics_answer.php" data-parsley-validate>
+            <h3>1. Which of the following animals belongs to the class Mammalia?</h3>
+            <input type="radio" name="answer1" value="Lizard" data-parsley-group="q1" required id="optionA1">
+            <label for="optionA1">A) Lizard</label><br>
+            <input type="radio" name="answer1" value="Shark" data-parsley-group="q1" required id="optionB1">
+            <label for="optionB1">B) Shark</label><br>
+            <input type="radio" name="answer1" value="Eagle" data-parsley-group="q1" required id="optionC1">
+            <label for="optionC1">C) Eagle</label><br>
+            <input type="radio" name="answer1" value="Dolphin" data-parsley-group="q1" required id="optionD1">
+            <label for="optionD1">D) Dolphin</label><br>
+
+            <h3>2. Which phylum do insects belong to?</h3>
+            <input type="radio" name="answer2" value="Chordata" data-parsley-group="q2" required id="optionA2">
+            <label for="optionA2">A) Chordata</label><br>
+            <input type="radio" name="answer2" value="Arthropoda" data-parsley-group="q2" required id="optionB2">
+            <label for="optionB2">B) Arthropoda</label><br>
+            <input type="radio" name="answer2" value="Mollusca" data-parsley-group="q2" required id="optionC2">
+            <label for="optionC2">C) Mollusca</label><br>
+            <input type="radio" name="answer2" value="Annelida" data-parsley-group="q2" required id="optionD2">
+            <label for="optionD2">D) Annelida</label><br>
+
+            <h3>3. Which animal is a cold-blooded vertebrate?</h3>
+            <input type="radio" name="answer3" value="Snake" data-parsley-group="q3" required id="optionA3">
+            <label for="optionA3">A) Snake</label><br>
+            <input type="radio" name="answer3" value="Penguin" data-parsley-group="q3" required id="optionB3">
+            <label for="optionB3">B) Penguin</label><br>
+            <input type="radio" name="answer3" value="Turtle" data-parsley-group="q3" required id="optionC3">
+            <label for="optionC3">C) Turtle</label><br>
+            <input type="radio" name="answer3" value="Squirrel" data-parsley-group="q3" required id="optionD3">
+            <label for="optionD3">D) Squirrel</label><br>
+
+            <h3>4. Which phylum includes animals with a notochord and a dorsal nerve cord?</h3>
+            <input type="radio" name="answer4" value="Arthropoda" data-parsley-group="q4" required id="optionA4">
+            <label for="optionA4">A) Arthropoda</label><br>
+            <input type="radio" name="answer4" value="Mollusca" data-parsley-group="q4" required id="optionB4">
+            <label for="optionB4">B) Mollusca</label><br>
+            <input type="radio" name="answer4" value="Chordata" data-parsley-group="q4" required id="optionC4">
+            <label for="optionC4">C) Chordata</label><br>
+            <input type="radio" name="answer4" value="Annelida" data-parsley-group="q4" required id="optionD4">
+            <label for="optionD4">D) Annelida</label><br>
+
+            <h3>5. Which of the following animals is a marsupial?</h3>
+            <input type="radio" name="answer5" value="Kangaroo" data-parsley-group="q5" required id="optionA5">
+            <label for="optionA5">A) Kangaroo</label><br>
+            <input type="radio" name="answer5" value="Elephant" data-parsley-group="q5" required id="optionB5">
+            <label for="optionB5">B) Elephant</label><br>
+            <input type="radio" name="answer5" value="Giraffe" data-parsley-group="q5" required id="optionC5">
+            <label for="optionC5">C) Giraffe</label><br>
+            <input type="radio" name="answer5" value="Panda" data-parsley-group="q5" required id="optionD5">
+            <label for="optionD5">D) Panda</label><br>
+
+            <h3>6. Which class do birds belong to?</h3>
+            <input type="radio" name="answer6" value="Mammalia" data-parsley-group="q6" required id="optionA6">
+            <label for="optionA6">A) Mammalia</label><br>
+            <input type="radio" name="answer6" value="Aves" data-parsley-group="q6" required id="optionB6">
+            <label for="optionB6">B) Aves</label><br>
+            <input type="radio" name="answer6" value="Reptilia" data-parsley-group="q6" required id="optionC6">
+            <label for="optionC6">C) Reptilia</label><br>
+            <input type="radio" name="answer6" value="Amphibia" data-parsley-group="q6" required id="optionD6">
+            <label for="optionD6">D) Amphibia</label><br>
+
+            <h3>7. What is the largest mammal on Earth?</h3>
+            <input type="radio" name="answer7" value="Elephant" data-parsley-group="q7" required id="optionA7">
+            <label for="optionA7">A) Elephant</label><br>
+            <input type="radio" name="answer7" value="Blue Whale" data-parsley-group="q7" required id="optionB7">
+            <label for="optionB7">B) Blue Whale</label><br>
+            <input type="radio" name="answer7" value="Giraffe" data-parsley-group="q7" required id="optionC7">
+            <label for="optionC7">C) Giraffe</label><br>
+            <input type="radio" name="answer7" value="Polar Bear" data-parsley-group="q7" required id="optionD7">
+            <label for="optionD7">D) Polar Bear</label><br>
+
+            <h3>8. Which animal belongs to the class Amphibia?</h3>
+            <input type="radio" name="answer8" value="Snake" data-parsley-group="q8" required id="optionA8">
+            <label for="optionA8">A) Snake</label><br>
+            <input type="radio" name="answer8" value="Frog" data-parsley-group="q8" required id="optionB8">
+            <label for="optionB8">B) Frog</label><br>
+            <input type="radio" name="answer8" value="Ostrich" data-parsley-group="q8" required id="optionC8">
+            <label for="optionC8">C) Ostrich</label><br>
+            <input type="radio" name="answer8" value="Shark" data-parsley-group="q8" required id="optionD8">
+            <label for="optionD8">D) Shark</label><br>
+
+            <h3>9. Which phylum includes animals with a segmented body and jointed legs?</h3>
+            <input type="radio" name="answer9" value="Chordata" data-parsley-group="q9" required id="optionA9">
+            <label for="optionA9">A) Chordata</label><br>
+            <input type="radio" name="answer9" value="Arthropoda" data-parsley-group="q9" required id="optionB9">
+            <label for="optionB9">B) Arthropoda</label><br>
+            <input type="radio" name="answer9" value="Mollusca" data-parsley-group="q9" required id="optionC9">
+            <label for="optionC9">C) Mollusca</label><br>
+            <input type="radio" name="answer9" value="Annelida" data-parsley-group="q9" required id="optionD9">
+            <label for="optionD9">D) Annelida</label><br>
+
+            <h3>10. Which of the following animals is a reptile?</h3>
+            <input type="radio" name="answer10" value="Crocodile" data-parsley-group="q10" required id="optionA10">
+            <label for="optionA10">A) Crocodile</label><br>
+            <input type="radio" name="answer10" value="Kangaroo" data-parsley-group="q10" required id="optionB10">
+            <label for="optionB10">B) Kangaroo</label><br>
+            <input type="radio" name="answer10" value="Horse" data-parsley-group="q10" required id="optionC10">
+            <label for="optionC10">C) Horse</label><br>
+            <input type="radio" name="answer10" value="Penguin" data-parsley-group="q10" required id="optionD10">
+            <label for="optionD10">D) Penguin</label><br>
+
+            <h3>11. Which phylum includes animals with radial symmetry?</h3>
+            <input type="radio" name="answer11" value="Echinodermata" data-parsley-group="q11" required id="optionA11">
+            <label for="optionA11">A) Echinodermata</label><br>
+            <input type="radio" name="answer11" value="Chordata" data-parsley-group="q11" required id="optionB11">
+            <label for="optionB11">B) Chordata</label><br>
+            <input type="radio" name="answer11" value="Platyhelminthes" data-parsley-group="q11" required
+                id="optionC11">
+            <label for="optionC11">C) Platyhelminthes</label><br>
+            <input type="radio" name="answer11" value="Annelida" data-parsley-group="q11" required id="optionD11">
+            <label for="optionD11">D) Annelida</label><br>
+
+            <h3>12. Which animal is a marsupial native to Australia?</h3>
+            <input type="radio" name="answer12" value="Kangaroo" data-parsley-group="q12" required id="optionA12">
+            <label for="optionA12">A) Kangaroo</label><br>
+            <input type="radio" name="answer12" value="Elephant" data-parsley-group="q12" required id="optionB12">
+            <label for="optionB12">B) Elephant</label><br>
+            <input type="radio" name="answer12" value="Giraffe" data-parsley-group="q12" required id="optionC12">
+            <label for="optionC12">C) Giraffe</label><br>
+            <input type="radio" name="answer12" value="Panda" data-parsley-group="q12" required id="optionD12">
+            <label for="optionD12">D) Panda</label><br>
+
+            <h3>13. Which class do fish belong to?</h3>
+            <input type="radio" name="answer13" value="Reptilia" data-parsley-group="q13" required id="optionA13">
+            <label for="optionA13">A) Reptilia</label><br>
+            <input type="radio" name="answer13" value="Mammalia" data-parsley-group="q13" required id="optionB13">
+            <label for="optionB13">B) Mammalia</label><br>
+            <input type="radio" name="answer13" value="Aves" data-parsley-group="q13" required id="optionC13">
+            <label for="optionC13">C) Aves</label><br>
+            <input type="radio" name="answer13" value="Actinopterygii" data-parsley-group="q13" required id="optionD13">
+            <label for="optionD13">D) Actinopterygii</label><br>
+
+            <h3>14. Which of the following animals is a carnivore?</h3>
+            <input type="radio" name="answer14" value="Gorilla" data-parsley-group="q14" required id="optionA14">
+            <label for="optionA14">A) Gorilla</label><br>
+            <input type="radio" name="answer14" value="Lion" data-parsley-group="q14" required id="optionB14">
+            <label for="optionB14">B) Lion</label><br>
+            <input type="radio" name="answer14" value="Elephant" data-parsley-group="q14" required id="optionC14">
+            <label for="optionC14">C) Elephant</label><br>
+            <input type="radio" name="answer14" value="Deer" data-parsley-group="q14" required id="optionD14">
+            <label for="optionD14">D) Deer</label><br>
+
+            <h3>15. Which of the following animals is a bony fish?</h3>
+            <input type="radio" name="answer15" value="Shark" data-parsley-group="q15" required id="optionA15">
+            <label for="optionA15">A) Shark</label><br>
+            <input type="radio" name="answer15" value="Salmon" data-parsley-group="q15" required id="optionB15">
+            <label for="optionB15">B) Salmon</label><br>
+            <input type="radio" name="answer15" value="Eel" data-parsley-group="q15" required id="optionC15">
+            <label for="optionC15">C) Eel</label><br>
+            <input type="radio" name="answer15" value="Ray" data-parsley-group="q15" required id="optionD15">
+            <label for="optionD15">D) Ray</label><br>
+
+            <h3>16. Which animal is a primate?</h3>
+            <input type="radio" name="answer16" value="Lion" data-parsley-group="q16" required id="optionA16">
+            <label for="optionA16">A) Lion</label><br>
+            <input type="radio" name="answer16" value="Tiger" data-parsley-group="q16" required id="optionB16">
+            <label for="optionB16">B) Tiger</label><br>
+            <input type="radio" name="answer16" value="Gorilla" data-parsley-group="q16" required id="optionC16">
+            <label for="optionC16">C) Gorilla</label><br>
+            <input type="radio" name="answer16" value="Orangutan" data-parsley-group="q16" required id="optionD16">
+            <label for="optionD16">D) Orangutan</label><br>
+
+            <h3>17. Which class includes animals that have feathers and lay eggs?</h3>
+            <input type="radio" name="answer17" value="Mammalia" data-parsley-group="q17" required id="optionA17">
+            <label for="optionA17">A) Mammalia</label><br>
+            <input type="radio" name="answer17" value="Reptilia" data-parsley-group="q17" required id="optionB17">
+            <label for="optionB17">B) Reptilia</label><br>
+            <input type="radio" name="answer17" value="Aves" data-parsley-group="q17" required id="optionC17">
+            <label for="optionC17">C) Aves</label><br>
+            <input type="radio" name="answer17" value="Amphibia" data-parsley-group="q17" required id="optionD17">
+            <label for="optionD17">D) Amphibia</label><br>
+
+            <h3>18. Which animal is a filter-feeder?</h3>
+            <input type="radio" name="answer18" value="Shark" data-parsley-group="q18" required id="optionA18">
+            <label for="optionA18">A) Shark</label><br>
+            <input type="radio" name="answer18" value="Dolphin" data-parsley-group="q18" required id="optionB18">
+            <label for="optionB18">B) Dolphin</label><br>
+            <input type="radio" name="answer18" value="Whale" data-parsley-group="q18" required id="optionC18">
+            <label for="optionC18">C) Whale</label><br>
+            <input type="radio" name="answer18" value="Lion" data-parsley-group="q18" required id="optionD18">
+            <label for="optionD18">D) Lion</label><br>
+
+            <h3>19. Which phylum includes animals with a soft body and often a hard shell?</h3>
+            <input type="radio" name="answer19" value="Arthropoda" data-parsley-group="q19" required id="optionA19">
+            <label for="optionA19">A) Arthropoda</label><br>
+            <input type="radio" name="answer19" value="Mollusca" data-parsley-group="q19" required id="optionB19">
+            <label for="optionB19">B) Mollusca</label><br>
+            <input type="radio" name="answer19" value="Chordata" data-parsley-group="q19" required id="optionC19">
+            <label for="optionC19">C) Chordata</label><br>
+            <input type="radio" name="answer19" value="Annelida" data-parsley-group="q19" required id="optionD19">
+            <label for="optionD19">D) Annelida</label><br>
+
+            <h3>20. Which animal is a marsupial native to North America?</h3>
+            <input type="radio" name="answer20" value="Kangaroo" data-parsley-group="q20" required id="optionA20">
+            <label for="optionA20">A) Kangaroo</label><br>
+            <input type="radio" name="answer20" value="Koala" data-parsley-group="q20" required id="optionB20">
+            <label for="optionB20">B) Koala</label><br>
+            <input type="radio" name="answer20" value="Panda" data-parsley-group="q20" required id="optionC20">
+            <label for="optionC20">C) Panda</label><br>
+            <input type="radio" name="answer20" value="Raccoon" data-parsley-group="q20" required id="optionD20">
+            <label for="optionD20">D) Raccoon</label><br>
+
+            <h3>21. Which class do snakes belong to?</h3>
+            <input type="radio" name="answer21" value="Reptilia" data-parsley-group="q21" required id="optionA21">
+            <label for="optionA21">A) Reptilia</label><br>
+            <input type="radio" name="answer21" value="Mammalia" data-parsley-group="q21" required id="optionB21">
+            <label for="optionB21">B) Mammalia</label><br>
+            <input type="radio" name="answer21" value="Aves" data-parsley-group="q21" required id="optionC21">
+            <label for="optionC21">C) Aves</label><br>
+            <input type="radio" name="answer21" value="Amphibia" data-parsley-group="q21" required id="optionD21">
+            <label for="optionD21">D) Amphibia</label><br>
+
+            <h3>22. Which of the following animals is a herbivore?</h3>
+            <input type="radio" name="answer22" value="Lion" data-parsley-group="q22" required id="optionA22">
+            <label for="optionA22">A) Lion</label><br>
+            <input type="radio" name="answer22" value="Gorilla" data-parsley-group="q22" required id="optionB22">
+            <label for="optionB22">B) Gorilla</label><br>
+            <input type="radio" name="answer22" value="Tiger" data-parsley-group="q22" required id="optionC22">
+            <label for="optionC22">C) Tiger</label><br>
+            <input type="radio" name="answer22" value="Elephant" data-parsley-group="q22" required id="optionD22">
+            <label for="optionD22">D) Elephant</label><br>
+
+            <h3>23. Which phylum includes animals that have a notochord at some stage of their life?</h3>
+            <input type="radio" name="answer23" value="Arthropoda" data-parsley-group="q23" required id="optionA23">
+            <label for="optionA23">A) Arthropoda</label><br>
+            <input type="radio" name="answer23" value="Mollusca" data-parsley-group="q23" required id="optionB23">
+            <label for="optionB23">B) Mollusca</label><br>
+            <input type="radio" name="answer23" value="Chordata" data-parsley-group="q23" required id="optionC23">
+            <label for="optionC23">C) Chordata</label><br>
+            <input type="radio" name="answer23" value="Annelida" data-parsley-group="q23" required id="optionD23">
+            <label for="optionD23">D) Annelida</label><br>
+
+            <h3>24. Which animal is a marsupial native to South America?</h3>
+            <input type="radio" name="answer24" value="Kangaroo" data-parsley-group="q24" required id="optionA24">
+            <label for="optionA24">A) Kangaroo</label><br>
+            <input type="radio" name="answer24" value="Koala" data-parsley-group="q24" required id="optionB24">
+            <label for="optionB24">B) Koala</label><br>
+            <input type="radio" name="answer24" value="Panda" data-parsley-group="q24" required id="optionC24">
+            <label for="optionC24">C) Panda</label><br>
+            <input type="radio" name="answer24" value="Opossum" data-parsley-group="q24" required id="optionD24">
+            <label for="optionD24">D) Opossum</label><br>
+
+            <h3>25. Which class includes animals that have a bony skeleton and breathe with lungs?</h3>
+            <input type="radio" name="answer25" value="Reptilia" data-parsley-group="q25" required id="optionA25">
+            <label for="optionA25">A) Reptilia</label><br>
+            <input type="radio" name="answer25" value="Mammalia" data-parsley-group="q25" required id="optionB25">
+            <label for="optionB25">B) Mammalia</label><br>
+            <input type="radio" name="answer25" value="Aves" data-parsley-group="q25" required id="optionC25">
+            <label for="optionC25">C) Aves</label><br>
+            <input type="radio" name="answer25" value="Amphibia" data-parsley-group="q25" required id="optionD25">
+            <label for="optionD25">D) Amphibia</label><br>
+
+
+            <input type="submit" value="Submit" id="submitBtn">
+        </form>
+    </div>
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.10.2/dist/parsley.min.js"></script>
+</body>
+
+</html>
