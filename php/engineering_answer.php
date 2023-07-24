@@ -1,10 +1,9 @@
 <?php 
 session_start();
 $fina= $_SESSION['fn'];
-
 require_once 'db_conn.php';
-
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -44,22 +43,19 @@ $engg_answer = [
     '25' => 'To display and analyze electrical signals over time',
 ];
 
-$engg_question=[];
-
-
-// Initialize a variable to keep track of the number of correct answers
-
-$engg_question = [];
+$engg_question=[]; // Initialize a variable to keep track of the number of correct answers
 $correctAnswers = 0;
 
 // Populate the $engg_question array and check for correct answers
-for ($i = 1; $i <= 25; $i++) {
+for ($i = 1; $i <= 25; $i++) 
+{
     $answerKey = 'answer' . $i;
     $userAnswer = $_POST[$answerKey];
     $engg_question[$i] = $userAnswer;
 
     // Check if the user's answer matches the correct answer
-    if ($userAnswer === $engg_answer[$i]) {
+    if ($userAnswer === $engg_answer[$i]) 
+    {
         $correctAnswers++;
     }
 }

@@ -1,10 +1,9 @@
 <?php 
 session_start();
 $fina= $_SESSION['fn'];
-
 require_once 'db_conn.php';
-
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -14,7 +13,6 @@ $sql="CREATE TABLE IF NOT EXISTS computer (
     `last_test_taken`date)";
 
 $conn->query($sql);
-
 $computer_answer = [
     '1' => 'Central Processing Unit',
     '2' => 'CPU',
@@ -43,22 +41,17 @@ $computer_answer = [
     '25' => 'While Loop',
 ];
 
-$computer_question=[];
-
-
-// Initialize a variable to keep track of the number of correct answers
-
-$computer_question = [];
-$correctAnswers = 0;
-
-// Populate the $computer_question array and check for correct answers
-for ($i = 1; $i <= 25; $i++) {
+$computer_question=[]; // Initialize a variable to keep track of the number of correct answers
+$correctAnswers = 0;  // Populate the $computer_question array and check for correct answers
+for ($i = 1; $i <= 25; $i++) 
+{
     $answerKey = 'answer' . $i;
     $userAnswer = $_POST[$answerKey];
     $computer_question[$i] = $userAnswer;
 
     // Check if the user's answer matches the correct answer
-    if ($userAnswer === $computer_answer[$i]) {
+    if ($userAnswer === $computer_answer[$i]) 
+    {
         $correctAnswers++;
     }
 }

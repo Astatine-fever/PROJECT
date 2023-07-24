@@ -1,10 +1,9 @@
 <?php 
 session_start();
 $fina= $_SESSION['fn'];
-
 require_once 'db_conn.php';
-
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -14,8 +13,6 @@ $sql="CREATE TABLE IF NOT EXISTS physics (
     `last_test_taken`date)";
 
 $conn->query($sql);
-
-
 $physics_answer=[
 '1'=>'Second',
 '2'=>'Temperature',
@@ -43,22 +40,17 @@ $physics_answer=[
 '24'=>'Potential Energy',
 '25'=>'Gravitational force',
 ];
-$physics_question=[];
-
-
-// Initialize a variable to keep track of the number of correct answers
-
-$physics_question = [];
-$correctAnswers = 0;
-
-// Populate the $physics_question array and check for correct answers
-for ($i = 1; $i <= 25; $i++) {
+$physics_question=[]; // Initialize a variable to keep track of the number of correct answers
+$correctAnswers = 0; // Populate the $physics_question array and check for correct answers
+for ($i = 1; $i <= 25; $i++) 
+{
     $answerKey = 'answer' . $i;
     $userAnswer = $_POST[$answerKey];
     $physics_question[$i] = $userAnswer;
 
     // Check if the user's answer matches the correct answer
-    if ($userAnswer === $physics_answer[$i]) {
+    if ($userAnswer === $physics_answer[$i]) 
+    {
         $correctAnswers++;
     }
 }

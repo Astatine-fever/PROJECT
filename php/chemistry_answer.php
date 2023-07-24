@@ -1,10 +1,9 @@
 <?php 
 session_start();
 $fina= $_SESSION['fn'];
-
 require_once 'db_conn.php';
-
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -14,8 +13,6 @@ $sql="CREATE TABLE IF NOT EXISTS chemistry (
     `last_test_taken`date)";
 
 $conn->query($sql);
-
-
 $chemistry_answer = [
     '1' => 'Hydrogen',
     '2' => 'H2O',
@@ -44,22 +41,17 @@ $chemistry_answer = [
     '25' => 'Oxygen'
 ];
 
-$chemistry_question=[];
-
-
-// Initialize a variable to keep track of the number of correct answers
-
-$chemistry_question = [];
-$correctAnswers = 0;
-
-// Populate the $chemistry_question array and check for correct answers
-for ($i = 1; $i <= 25; $i++) {
+$chemistry_question=[];  // Initialize a variable to keep track of the number of correct answers
+$correctAnswers = 0;  // Populate the $chemistry_question array and check for correct answers
+for ($i = 1; $i <= 25; $i++) 
+{
     $answerKey = 'answer' . $i;
     $userAnswer = $_POST[$answerKey];
     $chemistry_question[$i] = $userAnswer;
 
     // Check if the user's answer matches the correct answer
-    if ($userAnswer === $chemistry_answer[$i]) {
+    if ($userAnswer === $chemistry_answer[$i]) 
+    {
         $correctAnswers++;
     }
 }
