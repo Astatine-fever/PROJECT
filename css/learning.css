@@ -105,8 +105,8 @@ img {
     .tabcontent {
     display: none;
     float: left;
-    padding: 2vw;
-    width: 80%;
+    padding: 1vw;
+    width: 85%;
     border-left: none;
     height: 100%;
     }
@@ -136,6 +136,11 @@ img {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
+        font-size: 2vw;
+    }
+    .tabcontent
+    {
+        width: 100%;
     }
 
     .tab button {

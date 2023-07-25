@@ -21,10 +21,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $school = $_POST['school'];
 
     // Prepare and execute the SQL query to insert data into the database
-    $sql = "INSERT INTO user_db (firstname, lastname, email, phone, dob, username, pwd, education, edu_institute,created_at) VALUES ('$fname', '$lname', '$email', '$phone', '$dob', '$uname', '$pword', '$cg', '$school',NOW())";
+    $sql = "INSERT INTO user_db (
+        firstname, lastname, email, phone, dob, username, 
+        pwd, education, edu_institute,created_at) 
+        VALUES 
+        (
+            '$fname', '$lname', '$email', '$phone', '$dob', '$uname', 
+            '$pword', '$cg', '$school',NOW()
+        )";
 
     if ($conn->query($sql) === true) {
         // Redirect to a success page or display a success message
+        $sql_1 = "INSERT INTO scores (
+            fname, botany, zoology, chemistry, physics, maths, technology,engineering) 
+            VALUES ('$fname', 0, 0, 0, 0, 0, 0,0)";
+        
+        $conn->query($sql_1);
+
         header('Location: success.php');
         exit();
     } else {

@@ -2,6 +2,7 @@
 session_start();
 $fina= $_SESSION['fn'];
 require_once 'db_conn.php';
+
 if ($conn->connect_error) 
 {
     die("Connection failed: " . $conn->connect_error);
@@ -10,7 +11,7 @@ if ($conn->connect_error)
 $sql="CREATE TABLE IF NOT EXISTS botany (
     `fname` VARCHAR(50),
     `score` int(3),
-    `last_test_taken`date)";
+    `last_test_taken` date)";
 
 $conn->query($sql);
 $botany_answer = [
@@ -61,6 +62,12 @@ echo("Your score is $score");
 $sql="INSERT INTO botany values('$fina','$score','$t_date')";
 if($conn->query($sql)===true)
 {
+    $sql_1="UPDATE scores SET botany='$score' WHERE fname='$fina' ";
+    $conn->query($sql_1); 
     echo("row inserted ");
 }
+
+
+
+
 ?>

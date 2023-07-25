@@ -10,7 +10,7 @@ if ($conn->connect_error)
 $sql="CREATE TABLE IF NOT EXISTS computer (
     `fname` VARCHAR(50),
     `score` int(3),
-    `last_test_taken`date)";
+    `last_test_taken` date)";
 
 $conn->query($sql);
 $computer_answer = [
@@ -62,6 +62,8 @@ echo("Your score is $score");
 $sql="INSERT INTO computer values('$fina','$score','$t_date')";
 if($conn->query($sql)===true)
 {
+    $sql_1="UPDATE scores SET technology='$score' WHERE fname='$fina' ";
+    $conn->query($sql_1);
     echo("row inserted ");
 }
 ?>
