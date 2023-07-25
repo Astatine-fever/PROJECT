@@ -180,8 +180,6 @@ nav li a:hover {
 /* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    background-color: rgb(253, 217, 14);
-    filter: invert(1);
     right: 0;
     left: 0;
 }
@@ -196,8 +194,7 @@ nav li a:hover {
 
 /* Style for links within dropdown content on hover */
 .dropdown-content a:hover {
-    background-color: rgb(253, 217, 14);
-    filter: invert(1);
+    background-color:rgb(8, 95, 255)
 }
 
 .dropdown-content a img {
@@ -234,3 +231,27 @@ nav li a:hover {
         grid-column: 1 / -1;
     }
 }
+
+/* Grid items */
+
+ /* Existing styles for grid items (you may have other styles too) */
+
+    /* Add styles for the tooltip */
+    .grid-item-tooltip {
+        position: relative;
+    }
+
+    .grid-item-tooltip:hover::before {
+        content: "Coming Soon";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        white-space: nowrap;
+        z-index: 1;
+    }

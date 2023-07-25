@@ -1,0 +1,214 @@
+@font-face {
+    font-family: urban;
+    src: url(../assets/fonts/urbanist.ttf);
+}
+
+@font-face {
+    font-family: wo;
+    src: url(../assets/fonts/wireone.ttf);
+}
+
+@font-face {
+    font-family: dba;
+    src: url(../assets/fonts/darbots.otf);
+}
+
+/* Page Header  */
+.hea {
+  font-family: dba;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 5vw;
+  margin: 0;
+}
+
+.table1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .th1,
+  .td1 {
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px;
+    line-height: 1;
+  }
+
+
+/* Text Styling*/
+h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+h2
+{
+    font-family: Urban;
+    font-size: 2vw;
+    color: black;
+}
+
+h3
+{
+    font-family: urban;
+    color: black;
+}
+
+/* Style for images */
+img {
+    border: 2px;
+    width: 5vw;
+    height: 5vw;
+    align-items: center;
+    margin: 0;
+  }
+
+.ico {
+    border-radius: 25px;
+    width: 4vw;
+    height: 4vw;
+    
+}
+
+/* CSS for vertical tabs */
+.tab {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    width: 12vw;
+    float: left;
+    }
+
+    .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: left;
+    }
+
+    .tab button:hover {
+    background-color: #8fb2ff;
+    }
+
+    .tab button.active {
+        background-color: rgb(253, 217, 14);
+        filter: invert(1);
+    }
+
+    .tabcontent {
+    display: none;
+    float: left;
+    padding: 2vw;
+    width: 80%;
+    border-left: none;
+    height: 100%;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-family: urban;
+      }
+  
+      
+  
+      button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 600px) {
+    .tab {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .tab button {
+        flex: 1;
+        white-space: nowrap;
+    }
+    }
+
+    /* Lesson Content */
+
+    .hi
+    {
+        font-family: urban !important;
+        color: #000;
+        font-size: 5vw;
+    }
+
+    .topics
+    {
+        font-family: urban !important;
+        font-size: 3vw;
+        color:rgb(8, 95, 255);
+    }
+
+    .subheading
+    {
+        font-family: urban !important;
+    }
+
+    .text_content
+    {
+        font-family: urban !important;
+        font-size: 2.5vw;
+        text-align: justify;
+    }
+    .modern-list 
+    {
+        list-style:disc;
+        padding: 0;
+        font-family: urban;
+        font-size: 3.5vw;
+    }
+    .imga {
+        border-radius: 5px;
+        width: 15vw;
+        height: 15vw;
+        align-items: center;
+      }
+
+      .table_content {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .th1_C,
+      .td1_c {
+        vertical-align: middle;
+        text-align: center;
+        padding: 8px;
+        line-height: 1;
+      }
+      .img_content {
+        border-radius: 5px;
+        width: 30vw;
+        height: 30vw;
+        align-items: center;
+      }
+      .label_content
+      {
+        font-family: urban;
+        font-weight: bold;
+        width: 1vw;
+      }
+      
+    

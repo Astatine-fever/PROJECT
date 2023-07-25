@@ -47,8 +47,12 @@ $conn->query($sql);
                     <li class="dropdown">
                         <a href="settings.php"><img src="../assets/icons/test.png" class="ico" alt="settings"></a>
                         <div class="dropdown-content">
-                        <a href="../test/physics_test.html"> Physics MCQ TEST  </a>
-                        <a href="html/login.html"><img src="assets/icons/login.png" class="ico" > Login </a>
+                            <a href="../test/botany_test.html"> Botany MCQ TEST  </a>
+                            <a href="../test/chemistry_test.html"> Chemistry MCQ TEST  </a>
+                            <a href="../test/engineering_test.html"> Engineering MCQ TEST  </a>
+                            <a href="../test/physics_test.html"> Physics MCQ TEST  </a>
+                            <a href="../test/technology_test.html"> Technology MCQ TEST  </a>
+                            <a href="../test/zoology_test.html"> Zoology MCQ TEST  </a>
                         </div>
                     </li>
                     
@@ -59,33 +63,33 @@ $conn->query($sql);
 
     <!-- Main Content Section -->
     <div class="grid-container">
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <a href="physics.php">
                 <img src="../assets/products/Science/physics.png" alt="physics">
                 </a>
                 <h1> Physics </h1> 
         </div>
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Science/chemistry.png" alt="chemistry">
             <h1> Chemistry </h1>
         </div>
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Science/botany.png" alt="botany">
             <h1> Botany </h1>
         </div>
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Science/zoology.png" alt="zoology">
             <h1> Zoology </h1>
         </div>
         <div class="grid-item">
-            <img src="../assets/products/Technology/technology.png" alt="technology">
+        <a href="../source/computer_learning.html"><img src="../assets/products/Technology/technology.png" alt="technology"></a>
             <h1> Technology </h1>
         </div>
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Engineering/engineering.png" alt="engineering">
             <h1> Engineering </h1>
         </div>
-        <div class="grid-item">
+        <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Maths/maths.png" alt="maths">
             <h1> Mathematics </h1>
         </div>
