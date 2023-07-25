@@ -36,6 +36,15 @@ $query = "SELECT * FROM user_db WHERE firstname = ?";
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WS7B93E00"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4WS7B93E00');
+    </script>
   <title>Settings Page</title>
   <link rel="stylesheet" href="../css/settings.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
