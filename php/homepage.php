@@ -19,7 +19,19 @@ $sql="CREATE TABLE IF NOT EXISTS scores (
 
 $conn->query($sql);
 
+$sql = "
+CREATE TABLE IF NOT EXISTS course_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(100) NOT NULL,
+    most_visited_tab VARCHAR(50) NOT NULL,
+    least_visited_tab VARCHAR(50) NOT NULL,
+    allpagevisited BOOLEAN NOT NULL,
+    most_visit_number INT NOT NULL,
+    least_visit_number INT NOT NULL,
+    UNIQUE KEY unique_fname (fname)
+)";
 
+$conn->query($sql);
 
 ?>
 <!DOCTYPE html>
@@ -52,7 +64,12 @@ $conn->query($sql);
                 <ul>
                     <li class="dropdown">
                         <a href="settings.php"><img src="../assets/icons/settings.png" class="ico" alt="settings"></a>
-                    </li>                
+                    </li>  
+                    
+                    <li class="dropdown">
+                        <a href="#"><img src="../assets/icons/logout.png" onclick="logout()" class="ico" alt="logout"></a>
+                    </li>
+
                     <li class="dropdown">
                         <a href="settings.php"><img src="../assets/icons/test.png" class="ico" alt="settings"></a>
                         <div class="dropdown-content">
@@ -91,7 +108,7 @@ $conn->query($sql);
             <h1> Zoology </h1>
         </div>
         <div class="grid-item">
-        <a href="../source/computer_learning.html"><img src="../assets/products/Technology/technology.png" alt="technology"></a>
+        <a href="../tests/computer_learning.php"><img src="../assets/products/Technology/technology.png" alt="technology"></a>
             <h1> Technology </h1>
         </div>
         <div class="grid-item grid-item-tooltip">
@@ -114,5 +131,23 @@ $conn->query($sql);
             <li>Feature 3</li>
         </ul>
     </section>
+    <script>
+        function logout() 
+        {
+    // Send a request to the logout.php file using Fetch API
+    fetch("../php/logout.php")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            // Handle the response here if needed
+            // For example, you can redirect the user to the login page after successful logout
+            window.location.href = "../html/login.html"; // Replace "login.php" with the page you want to redirect to
+        })
+        .catch(error => {
+            // Handle errors or other status codes here
+        });
+    }
+    </script>
 </body>
 </html>

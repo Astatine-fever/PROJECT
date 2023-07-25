@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (password_verify($password, $storedPassword)) {
             // Password is correct, redirect to the desired page
+            session_destroy();
+            $_SESSION = array();
             session_start();
             $_SESSION['fn'] = $row['firstname'];
             $_SESSION['ln'] = $row['lastname'];
@@ -34,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         else
         {
-            $sa = "Invalid username or password";
-            echo($sa);
+            header("Location: invalid.php");
+            exit();
         }
     }
 

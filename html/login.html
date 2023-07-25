@@ -29,10 +29,17 @@
             <input type="password" placeholder="password" id="password" name="password" required>
             <button type="submit" class="lb">Login</button>
             <button type="reset" class="cle">Clear</button>
+            <button onclick="visitPage()" class="lb">Forgot password </button>
           </td>
         </table>
         </form>
       </div>
+      <script>
+        function visitPage() {
+            // Replace 'URL_OF_ANOTHER_PAGE' with the actual URL of the page you want to navigate to
+            window.location.href = '../html/password_reset.html';
+        }
+      </script>
     </body>
     </html>
     
