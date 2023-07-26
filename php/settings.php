@@ -45,6 +45,13 @@ $query = "SELECT * FROM user_db WHERE firstname = ?";
 
     gtag('config', 'G-4WS7B93E00');
     </script>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "i51hbqpqx6");
+  </script>
   <title>Settings Page</title>
   <link rel="stylesheet" href="../css/settings.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>

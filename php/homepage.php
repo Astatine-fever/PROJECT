@@ -11,7 +11,6 @@ $sql="CREATE TABLE IF NOT EXISTS scores (
     `fname` VARCHAR(50),
     `physics` int(3),
     `chemistry` int(3), 
-    `maths` int(3),
     `botany` int(3),
     `zoology` int(3),
     `technology` int(3),
@@ -19,8 +18,7 @@ $sql="CREATE TABLE IF NOT EXISTS scores (
 
 $conn->query($sql);
 
-$sql = "
-CREATE TABLE IF NOT EXISTS course_data (
+$sql = " CREATE TABLE IF NOT EXISTS course_data (
     id INT AUTO_INCREMENT PRIMARY KEY,
     fname VARCHAR(100) NOT NULL,
     most_visited_tab VARCHAR(50) NOT NULL,
@@ -33,6 +31,24 @@ CREATE TABLE IF NOT EXISTS course_data (
 
 $conn->query($sql);
 
+
+$query = "SELECT * FROM scores WHERE fname = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $fn);
+$stmt->execute();
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
+
+if ($row !== null) 
+{
+    
+    $_SESSION['phy'] = $row['physics'];
+    $_SESSION['chem'] = $row['chemistry'];
+    $_SESSION['engg'] = $row['engineering'];
+    $_SESSION['bot'] = $row['botany'];
+    $_SESSION['zoo'] = $row['zoology'];
+    $_SESSION['tech'] = $row['technology'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +62,15 @@ $conn->query($sql);
 
     gtag('config', 'G-4WS7B93E00');
     </script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "i51hbqpqx6");
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astaverse</title>
@@ -108,46 +133,63 @@ $conn->query($sql);
             <h1> Zoology </h1>
         </div>
         <div class="grid-item">
-        <a href="../tests/computer_learning.php"><img src="../assets/products/Technology/technology.png" alt="technology"></a>
+        <a href="../source/computer_learning.php"><img src="../assets/products/Technology/technology.png" alt="technology"></a>
             <h1> Technology </h1>
         </div>
         <div class="grid-item grid-item-tooltip">
             <img src="../assets/products/Engineering/engineering.png" alt="engineering">
             <h1> Engineering </h1>
         </div>
-        <div class="grid-item grid-item-tooltip">
-            <img src="../assets/products/Maths/maths.png" alt="maths">
-            <h1> Mathematics </h1>
-        </div>
     </div>
-
     <!-- Details Section -->
     <section class="details">
-        <p>Time Spent on Site: 2 hours</p>
-        <p>Dashboard Features:</p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
+        <h1 align="center" > Exam Scores  </h1><br>
+    <div class="grid-container">
+        <div class="grid-item">
+           <h2> Botany  </h2><br>
+           <h1> <?php echo($_SESSION['bot']);?> / 100</h1>
+        </div>
+        <div class="grid-item ">
+            <h2> Zoology </h2><br>
+            <h1> <?php echo($_SESSION['zoo']);?> / 100</h1>
+        </div>
+        <div class="grid-item ">
+            <h2> Chemistry </h2><br>
+            <h1> <?php echo($_SESSION['chem']);?> / 100 </h1>
+        </div>
+        <div class="grid-item">
+           <h2> Physics </h2><br>
+           <h1> <?php echo($_SESSION['phy']);?> / 100</h1>
+          
+        </div>
+        <div class="grid-item ">
+            <h2> Technology </h2><br>
+            <h1> <?php echo($_SESSION['tech']);?> / 100</h1>
+        </div>
+        <div class="grid-item ">
+            <h2> Engineering </h2><br>
+            <h1> <?php echo($_SESSION['engg']);?> / 100</h1>
+        </div>
+        
+    </div>
     </section>
     <script>
         function logout() 
         {
-    // Send a request to the logout.php file using Fetch API
-    fetch("../php/logout.php")
-        .then(response => {
+            // Send a request to the logout.php file using Fetch API
+            fetch("../php/logout.php")
+            .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             // Handle the response here if needed
             // For example, you can redirect the user to the login page after successful logout
             window.location.href = "../html/login.html"; // Replace "login.php" with the page you want to redirect to
-        })
-        .catch(error => {
+            })
+            .catch(error => {
             // Handle errors or other status codes here
-        });
-    }
+            });
+        }
     </script>
 </body>
 </html>
