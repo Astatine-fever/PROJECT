@@ -65,5 +65,6 @@ if($conn->query($sql)===true)
     echo("row inserted ");
     $sql_1="UPDATE scores SET chemistry='$score' WHERE fname='$fina' ";
     $conn->query($sql_1);
+    header("Location:homepage.php");
 }
 ?>

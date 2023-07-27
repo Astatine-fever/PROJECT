@@ -64,7 +64,7 @@ if($conn->query($sql)===true)
 {
     $sql_1="UPDATE scores SET botany='$score' WHERE fname='$fina' ";
     $conn->query($sql_1); 
-    echo("row inserted ");
+    header("Location:homepage.php");
 }
 
 
