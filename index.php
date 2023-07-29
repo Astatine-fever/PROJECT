@@ -1,3 +1,30 @@
+<?php
+// Establish database connection (adjust these values according to your database configuration)
+require_once 'php/db_conn.php';
+
+// Check if the connection was successful
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql_db_creation="CREATE DATABASE IF NOT EXISTS astaverse";
+$sql_tb_creation="CREATE TABLE IF NOT EXISTS user_db (
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+    email VARCHAR(50) PRIMARY KEY,
+    phone VARCHAR(50),
+    dob DATE,
+    education VARCHAR(50),
+    edu_institute VARCHAR(50),
+    username VARCHAR(50) UNIQUE,
+    pwd VARCHAR(200),
+    created_at TIMESTAMP
+)";
+$conn->select_db('astaverse');
+$conn->query($sql_db_creation);
+$conn->query($sql_tb_creation);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
