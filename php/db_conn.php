@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "asta_admin";
-$password = "Ast@t!n3p63";
-$database = "astaverse";
+$username = "root";
+$password = "";
+$database = "shine";
 
 // Create a connection
 $conn = mysqli_connect($servername, $username, $password, $database);
