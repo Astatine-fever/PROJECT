@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 }
 
 $sql_db_creation="CREATE DATABASE IF NOT EXISTS shine";
-$sql_tb_creation="CREATE TABLE IF NOT EXISTS user_db (
+$sql_tb_creation="CREATE TABLE IF NOT EXISTS enquiries (
     firstname VARCHAR(50),
     lastname VARCHAR(50),
     email VARCHAR(50) PRIMARY KEY,
@@ -16,8 +16,6 @@ $sql_tb_creation="CREATE TABLE IF NOT EXISTS user_db (
     dob DATE,
     education VARCHAR(50),
     Addr VARCHAR(100),
-    username VARCHAR(50) UNIQUE,
-    pwd VARCHAR(200),
     created_at TIMESTAMP
 )";
 $conn->select_db('astaverse');
