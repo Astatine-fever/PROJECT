@@ -1,48 +1,76 @@
+/* Define font faces */
 @font-face {
     font-family: urban;
     src: url(../assets/fonts/urbanist.ttf);
+    /* Add additional font formats if necessary */
 }
 
-@font-face {
-    font-family: wo;
-    src: url(../assets/fonts/wireone.ttf);
-}
-
-@font-face {
-    font-family: dba;
-    src: url(../assets/fonts/darbots.otf);
-}
-
+/* Reset box-sizing and margin/padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-img
-{
-    max-width: 8vw;
-    max-height: 8vw;
-    min-width: 4vw;
-    min-height: 4vw;
+/* Image Styles */
+img {
+    width: 8vw;
+    max-height: 8vw; /* Adjust as needed */
 }
 
+/* Company Icon Styles */
 .company_icon {
     border: 2px;
     width: 5vw;
     height: 5vw;
 }
 
+/* Body Styles */
 body {
     font-family: urban;
     background-color: #ffffff;
 }
 
-h1
-{
+/* Heading Styles */
+h1, h2, .hea, .heb {
     font-family: urban;
-    font-size: 2.5vw;
+}
+
+.hea {
+    align-items: center;
+    font-size: 5vw;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item:hover {
+    border-color: black;
+    background-color: rgb(253, 217, 14);
+    filter: invert(1);
+}
+
+/* Details Section Styles */
+.details {
+    background-color: #e6e6e6;
+    padding: 20px;
+    text-align: center;
+}
+
+.details p {
+    margin-bottom: 10px;
 }
 
 /* Header Styles */
@@ -68,62 +96,11 @@ h1
     border-radius: 25px;
     width: 4vw;
     height: 4vw;
-    
 }
 
-.ico:hover
-{
+.ico:hover {
     background-color: rgb(253, 217, 14);
-  filter: invert(1);
-}
-
-.hea {
-    font-family: dba;
-    align-items: center;
-    font-size: 5vw;
-}
-
-.heb {
-    font-family: urban;
-    align-items: center;
-    font-size: 3.5vw;
-}
-
-/* Main Content Styles */
-.main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-}
-
-.grid-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.grid-item img {
-    height: 20vh;
-    width: auto;
-    margin-bottom: 10px;
-}
-
-.grid-item h2 {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* Details Section Styles */
-.details {
-    background-color: #e6e6e6;
-    padding: 20px;
-    text-align: center;
-}
-
-.details p {
-    margin-bottom: 10px;
+    filter: invert(1);
 }
 
 /* Responsive Styles */
@@ -131,15 +108,27 @@ h1
     .main-content {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
+
+    .dropdown-content a,
+    .dropdown-content {
+        font-size: 5vw; /* Adjust as needed */
+    }
+
+    .dropdown-content {
+        font-size: 1vw; /* Adjust as needed */
+    }
+
+    .grid-item {
+        grid-column: 1 / -1;
+    }
 }
 
-/* Style for navigation */
+/* Navigation Styles */
 nav {
     background-color: #ffffff;
     font-family: calibri;
 }
 
-/* Style for unordered lists within navigation */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -147,12 +136,10 @@ nav ul {
     overflow: hidden;
 }
 
-/* Style for list items within navigation */
 nav li {
     float: right;
 }
 
-/* Style for links within navigation */
 nav li a {
     display: block;
     border-radius: 10px;
@@ -161,12 +148,11 @@ nav li a {
     text-decoration: none;
 }
 
-/* Style for links within navigation on hover */
 nav li a:hover {
     background-color: rgb(255, 255, 255);
 }
 
-/* Style for dropdown content */
+/* Dropdown Content Styles */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -177,14 +163,12 @@ nav li a:hover {
     border-radius: 10px;
 }
 
-/* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
     right: 0;
     left: 0;
 }
 
-/* Style for links within dropdown content */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -192,9 +176,8 @@ nav li a:hover {
     display: block;
 }
 
-/* Style for links within dropdown content on hover */
 .dropdown-content a:hover {
-    background-color:rgb(8, 95, 255)
+    background-color:rgb(8, 95, 255);
 }
 
 .dropdown-content a img {
@@ -203,55 +186,10 @@ nav li a:hover {
     height: 4vw;
 }
 
-/* Grid */
+/* Grid Container Styles */
 .grid-container {
     display: grid;
     border-radius: 25px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
 }
-
-/* Style for grid items */
-.grid-item {
-    border-radius: 25px;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Style for grid items on hover */
-.grid-item:hover {
-    border-color: black;
-    background-color: rgb(253, 217, 14);
-    filter: invert(1);
-}
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Set the width of grid items to 100% on mobile devices */
-    .grid-item {
-        grid-column: 1 / -1;
-    }
-}
-
-/* Grid items */
-
- /* Existing styles for grid items (you may have other styles too) */
-
-    /* Add styles for the tooltip */
-    .grid-item-tooltip {
-        position: relative;
-    }
-
-    .grid-item-tooltip:hover::before {
-        content: "Coming Soon";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 8px 12px;
-        border-radius: 4px;
-        font-size: 14px;
-        white-space: nowrap;
-        z-index: 1;
-    }

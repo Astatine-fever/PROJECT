@@ -1,16 +1,7 @@
+/* Define font faces */
 @font-face {
   font-family: urban;
   src: url(../assets/fonts/urbanist.ttf);
-}
-
-@font-face {
-  font-family: wo;
-  src: url(../assets/fonts/wireone.ttf);
-}
-
-@font-face {
-  font-family: dba;
-  src: url(../assets/fonts/darbots.otf);
 }
 
 /* Set the background color of the body */
@@ -25,16 +16,19 @@ img {
   height: 8vw;
 }
 
-/* Style for the main heading */
+/* Common font and size for headings */
+h1, h2, .hea {
+  font-family: urban;
+}
+
+/* Style for main heading */
 .hea {
-  font-family: dba;
   align-items: center;
   font-size: 5vw;
 }
 
 /* Style for regular text */
 .oli {
-  font-family: urban;
   font-size: 2.5vw;
 }
 
@@ -59,22 +53,20 @@ img {
 }
 
 /* Style for table headers and cells */
-.th1,
-.td1 {
+.th1, .td1 {
   text-align: left;
   padding: 8px;
 }
 
-/* Style for grid containers */
-.grid-container {
+/* Common styles for grid containers */
+.grid-container, .grid-container1 {
   display: grid;
   border-radius: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
 }
 
 /* Style for grid items */
-.grid-item {
+.grid-item, .grid-item1 {
   border-radius: 25px;
   padding: 20px;
   text-align: center;
@@ -87,39 +79,12 @@ img {
   filter: invert(1);
 }
 
-/* Style for another grid container */
-.grid-container1 {
-  display: grid;
-  border-radius: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
-}
-
-/* Style for grid items within another container */
-.grid-item1 {
-  border-radius: 25px;
-  padding: 2px;
-  text-align: center;
-}
-
-/* Style for heading level 2 */
-h2 {
-  font-size: 2.5vw;
-  font-family: urban;
-}
-
-h1
-{
-  font-size: 2.3vw;
-  font-family: urban;
-}
-
-/* Style for paragraphs */
-p {
-  font-size: 2vw;
-  font-family: urban;
-  text-align: justify;
-  text-justify: inter-word;
+/* Media query for grid items on smaller screens */
+@media screen and (max-width: 600px) {
+  .grid-item {
+    width: 100%;
+    grid-column: span 1;
+  }
 }
 
 /* Style for navigation */
@@ -158,12 +123,11 @@ nav li a:hover {
 /* Style for dropdown content */
 .dropdown-content {
   display: none;
-  position:fixed;
+  position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  border-radius: 10px;
 }
 
 /* Show dropdown content on hover */
@@ -173,13 +137,6 @@ nav li a:hover {
   left: 0;
 }
 
-
-/* Style for links within dropdown content on hover */
-.dropdown-content a:hover {
-  background-color: rgb(253, 217, 14);
-  filter: invert(1);
-}
-
 /* Style for links within dropdown content */
 .dropdown-content a {
   color: black;
@@ -187,6 +144,12 @@ nav li a:hover {
   display: flex;
   align-items: center;
   padding: 12px 16px;
+}
+
+/* Style for links within dropdown content on hover */
+.dropdown-content a:hover {
+  background-color: rgb(253, 217, 14);
+  filter: invert(1);
 }
 
 /* Style for the login and signup links */
@@ -200,10 +163,4 @@ nav li a:hover {
 .dropdown-content a:nth-child(2) img,
 .dropdown-content a:nth-child(3) img {
   margin-right: 5px; /* Add some spacing between the icon and text */
-}
-@media screen and (max-width: 600px) {
-  .grid-item {
-    width: 100%; /* Set the width to 100% to occupy the full screen width */
-    grid-column: span 1; /* Ensure each grid item spans only one column */
-  }
 }
