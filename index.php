@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql_db_creation="CREATE DATABASE IF NOT EXISTS astaverse";
+$sql_db_creation="CREATE DATABASE IF NOT EXISTS shine";
 $sql_tb_creation="CREATE TABLE IF NOT EXISTS user_db (
     firstname VARCHAR(50),
     lastname VARCHAR(50),
@@ -15,7 +15,7 @@ $sql_tb_creation="CREATE TABLE IF NOT EXISTS user_db (
     phone VARCHAR(50),
     dob DATE,
     education VARCHAR(50),
-    edu_institute VARCHAR(50),
+    Addr VARCHAR(100),
     username VARCHAR(50) UNIQUE,
     pwd VARCHAR(200),
     created_at TIMESTAMP
@@ -29,22 +29,6 @@ $conn->query($sql_tb_creation);
 <html lang="en">
 <head>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WS7B93E00"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4WS7B93E00');
-    </script>
-
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "i51hbqpqx6");
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astaverse</title>
